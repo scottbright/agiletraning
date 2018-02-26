@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20180226 12:32:39.263" generator="Robot 3.0.2 (Python 2.7.10 on darwin)">
+<suite source="/Users/wolverine/Exxon2018/robot/google.robot" id="s1" name="Google">
+<test id="s1-t1" name="Search Google">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>https://google.com</arg>
+<arg>gc</arg>
+</arguments>
+<msg timestamp="20180226 12:32:39.359" level="INFO">Opening browser 'gc' to base url 'https://google.com'.</msg>
+<status status="PASS" endtime="20180226 12:32:45.544" starttime="20180226 12:32:39.358"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=q</arg>
+<arg>bnk48</arg>
+</arguments>
+<msg timestamp="20180226 12:32:45.545" level="INFO">Typing text 'bnk48' into text field 'name=q'.</msg>
+<status status="PASS" endtime="20180226 12:32:45.818" starttime="20180226 12:32:45.544"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>name=btnK</arg>
+</arguments>
+<msg timestamp="20180226 12:32:45.819" level="INFO">Clicking button 'name=btnK'.</msg>
+<status status="PASS" endtime="20180226 12:32:47.042" starttime="20180226 12:32:45.818"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>คุกกี้เสี่ยงทาย</arg>
+</arguments>
+<msg timestamp="20180226 12:32:47.078" level="INFO">Current page contains text 'คุกกี้เสี่ยงทาย'.</msg>
+<status status="PASS" endtime="20180226 12:32:47.079" starttime="20180226 12:32:47.042"></status>
+</kw>
+<status status="PASS" endtime="20180226 12:32:47.079" critical="yes" starttime="20180226 12:32:39.358"></status>
+</test>
+<status status="PASS" endtime="20180226 12:32:47.080" starttime="20180226 12:32:39.270"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Google" pass="1">Google</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
