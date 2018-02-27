@@ -18,8 +18,8 @@ public class ToyListItemMapperTest {
     public void ToyToToyListItem() {
         Toy toy = new Toy();
         toy.setName("Chan");
-        toy.setAge(12);
-        toy.setAvailability(true);
+        toy.setAge("3_to_5");
+        toy.setAvailability("Instock");
         toy.setBrand("gg");
         toy.setGender("Male");
         toy.setPrice(123.45);

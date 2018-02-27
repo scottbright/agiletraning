@@ -1,9 +1,11 @@
 com/agile/Toy/api/v1/Repositories/ToyListsRepository.class
 com/agile/Toy/api/v1/Model/ToyListItemDTO.class
 com/agile/Toy/api/v1/Mappers/ToyListItemMapperImpl.class
+com/agile/Toy/api/v1/Model/ToyListDTO.class
 com/agile/Toy/api/v1/services/DefaultToyService.class
 com/agile/Toy/api/v1/controllers/ToyController.class
 com/agile/Toy/api/v1/services/ToyService.class
 com/agile/Toy/ToyAppApplication.class
 com/agile/Toy/api/v1/Mappers/ToyListItemMapper.class
+com/agile/Toy/Bootstrap/Bootstrap.class
 com/agile/Toy/api/v1/Domain/Toy.class

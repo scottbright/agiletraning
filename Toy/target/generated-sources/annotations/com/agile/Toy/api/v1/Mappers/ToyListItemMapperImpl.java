@@ -3,12 +3,14 @@ package com.agile.Toy.api.v1.Mappers;
 import com.agile.Toy.api.v1.Domain.Toy;
 import com.agile.Toy.api.v1.Model.ToyListItemDTO;
 import javax.annotation.Generated;
+import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2018-02-26T17:10:04+0700",
+    date = "2018-02-27T12:52:35+0700",
     comments = "version: 1.2.0.CR2, compiler: javac, environment: Java 1.8.0_161 (Oracle Corporation)"
 )
+@Component
 public class ToyListItemMapperImpl implements ToyListItemMapper {
 
     @Override

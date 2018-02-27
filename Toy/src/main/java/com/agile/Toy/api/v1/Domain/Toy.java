@@ -10,14 +10,14 @@ import javax.persistence.Id;
 public class Toy {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String name;
     private String brand;
-    private Integer age;
+    private String age;
     private String gender;
-    private Boolean availability;
+    private String availability;
     private Double price;
     private Integer quantity;
 
@@ -46,11 +46,11 @@ public class Toy {
         this.brand = brand;
     }
 
-    public Integer getAge() {
+    public String getAge() {
         return age;
     }
 
-    public void setAge(Integer age) {
+    public void setAge(String age) {
         this.age = age;
     }
 
@@ -62,11 +62,11 @@ public class Toy {
         this.gender = gender;
     }
 
-    public Boolean getAvailability() {
+    public String getAvailability() {
         return availability;
     }
 
-    public void setAvailability(Boolean availability) {
+    public void setAvailability(String availability) {
         this.availability = availability;
     }
 

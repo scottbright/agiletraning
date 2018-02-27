@@ -1,12 +1,13 @@
 package com.agile.Toy.api.v1.Model;
 
+
 public class ToyListItemDTO {
 
     private String name;
     private String brand;
-    private Integer age;
+    private String age;
     private String gender;
-    private Boolean availability;
+    private String availability;
     private Double price;
 
     public String getName() {
@@ -25,11 +26,11 @@ public class ToyListItemDTO {
         this.brand = brand;
     }
 
-    public Integer getAge() {
+    public String getAge() {
         return age;
     }
 
-    public void setAge(Integer age) {
+    public void setAge(String age) {
         this.age = age;
     }
 
@@ -41,11 +42,11 @@ public class ToyListItemDTO {
         this.gender = gender;
     }
 
-    public Boolean getAvailability() {
+    public String getAvailability() {
         return availability;
     }
 
-    public void setAvailability(Boolean availability) {
+    public void setAvailability(String availability) {
         this.availability = availability;
     }
 

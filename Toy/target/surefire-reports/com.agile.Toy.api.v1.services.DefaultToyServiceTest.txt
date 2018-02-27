@@ -1,8 +1,0 @@
--------------------------------------------------------------------------------
-Test set: com.agile.Toy.api.v1.services.DefaultToyServiceTest
--------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.002 sec <<< FAILURE! - in com.agile.Toy.api.v1.services.DefaultToyServiceTest
-getToyListItem(com.agile.Toy.api.v1.services.DefaultToyServiceTest)  Time elapsed: 0.002 sec  <<< ERROR!
-java.lang.NullPointerException: null
-	at com.agile.Toy.api.v1.services.DefaultToyServiceTest.getToyListItem(DefaultToyServiceTest.java:38)
-
