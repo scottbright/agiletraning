@@ -15,14 +15,14 @@
                 </md-select>
             </md-input-container>
             <md-input-container flex>
-                <md-button class="md-raised md-primary">Search</md-button>
+                <md-button class="md-raised md-primary" ng-click="search()">Search</md-button>
             </md-input-container>
         </div>
-        <div layout="column">
+        <div layout="column" ng-if="toys!=null">
                 <h2>{{toys.length}} toys found</h2>
 
                 <table>
-                    <tr >
+                    <tr>
                         <th>Toy Name</th>
                         <th>Brand</th>
                         <th>Gender</th>
@@ -31,7 +31,7 @@
                         <th>Price</th>
 
                     </tr>
-                    <tr class="" ng-repeat="toy in toys">
+                    <tr class="hvr-fade-edit clickable zebra" ng-repeat="toy in toys" ng-click="gotoProductDetail(toy.ID)">
                         <td>{{toy.toyName}}</td>
                         <td>{{toy.brand}}</td>
                         <td>{{toy.gender}}</td>
@@ -44,5 +44,6 @@
                 </table>
 
         </div>
+        
     </div>
 </div>

@@ -1,0 +1,24 @@
+{
+    "orderNumber": 12345,
+    "items": [
+        {
+            "ID":1,
+            "toyName":"ToyStory",
+            "gender":"Male",
+            "age":4,
+            "price":100,
+            "brand":"CoolKidz",
+            "orderQuantity":20
+        },  
+        {
+            "ID":2,
+            "toyName":"Toy2",
+            "gender":"Female",
+            "age":6,
+            "price":150,
+            "brand":"SportsFun",
+            "orderQuantity":15
+        }
+
+    ]
+}
