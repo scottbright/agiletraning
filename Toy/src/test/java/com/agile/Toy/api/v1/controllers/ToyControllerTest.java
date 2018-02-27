@@ -35,7 +35,7 @@ public class ToyControllerTest {
     @Test
     public void getToyListTest() throws Exception {
         String gender = "Male";
-        Integer age = 4;
+        String age = "4";
 
         List<ToyListItemDTO> toyListItemDTOList = new ArrayList<>();
 
@@ -47,12 +47,12 @@ public class ToyControllerTest {
 
         toyListItemDTOList.add(toyListItemDTO);
 
-        when(defaultToyService.getToyFromGenderAndAge(any(String.class),any(Integer.class))).thenReturn(toyListItemDTOList);
+        when(defaultToyService.getToyFromGenderAndAge(any(String.class),any(String.class))).thenReturn(toyListItemDTOList);
 
         mvc.perform(get("/api/v1/toyList?gender="+gender+"&age="+age)
             .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$.ToyList",hasSize(1)));
+                .andExpect(jsonPath("$.ToyLists",hasSize(1)));
     }
 
 }
