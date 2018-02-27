@@ -26,9 +26,11 @@ public class DefaultToyService implements ToyService{
     }
 
     @Override
-    public List<ToyListItemDTO> getToyFromGenderAndAge(String gender,Integer age) {
+    public List<ToyListItemDTO> getToyFromGenderAndAge(String gender,String age) {
+
         if(gender.equals("All"))
-            gender = "Neutral";
+            gender = "%";
+
         List<Toy> toyList = toyListsRepository.getByGenderAndAge(gender,convertAge(age));
         System.out.println(toyList.size());
         return toyList.stream()
@@ -36,16 +38,23 @@ public class DefaultToyService implements ToyService{
                 .collect(Collectors.toList());
     }
 
-    private String convertAge(Integer age){
-        if(age < 1)
-            return "Baby";
-        if(age >=1 && age <3 )
-            return "Toddler";
-        if(age >=3 && age <=5)
-            return "3_to_5";
-        if(age >=5 && age <= 8)
-            return "6_to_8";
-        else
-            return "over8";
+    private String convertAge(String age) {
+        if (age.equals("All")) {
+            return "%";
+        }
+        else {
+            Integer ageInt = Integer.parseInt(age);
+            if (ageInt < 1)
+                return "Baby";
+            if (ageInt >= 1 && ageInt < 3)
+                return "Toddler";
+            if (ageInt >= 3 && ageInt <= 5)
+                return "3_to_5";
+            if (ageInt >= 5 && ageInt <= 8)
+                return "6_to_8";
+            else
+                return "over8";
+        }
     }
+
 }

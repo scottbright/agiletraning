@@ -45,7 +45,7 @@ public class DefaultToyServiceTest {
 
         when(toyListsRepository.getByGenderAndAge(gender,age)).thenReturn(toys);
 
-        List<ToyListItemDTO> toyListItemDTO = defaultToyService.getToyFromGenderAndAge(gender,0);
+        List<ToyListItemDTO> toyListItemDTO = defaultToyService.getToyFromGenderAndAge(gender,"0");
 
         assertEquals("Baby",toyListItemDTO.get(0).getAge());
     }
@@ -63,9 +63,29 @@ public class DefaultToyServiceTest {
 
         when(toyListsRepository.getByGenderAndAge(gender,age)).thenReturn(toys);
 
-        List<ToyListItemDTO> toyListItemDTO = defaultToyService.getToyFromGenderAndAge(gender,4);
+        List<ToyListItemDTO> toyListItemDTO = defaultToyService.getToyFromGenderAndAge(gender,"4");
 
         assertEquals("3_to_5",toyListItemDTO.get(0).getAge());
     }
+    @Test
+    public void getToyListItemAllAgeAllGender(){
+        String gender = "Female";
+        String age = "3_to_5";
+
+        Toy toy = new Toy();
+        toy.setAge(age);
+
+        List<Toy> toys = new ArrayList<Toy>();
+        toys.add(toy);
+
+
+        when(toyListsRepository.getByGenderAndAge("%","%")).thenReturn(toys);
+
+        List<ToyListItemDTO> toyListItemDTO = defaultToyService.getToyFromGenderAndAge("All","All");
+
+        assertEquals("3_to_5",toyListItemDTO.get(0).getAge());
+    }
+
+
 
 }

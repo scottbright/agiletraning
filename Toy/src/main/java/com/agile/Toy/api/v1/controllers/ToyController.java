@@ -26,7 +26,7 @@ public class ToyController {
 
     @GetMapping("/toyList")
     @ResponseStatus(HttpStatus.OK)
-    public ToyListDTO getToyListByGenderAndAge(@RequestParam String gender,@RequestParam Integer age){
+    public ToyListDTO getToyListByGenderAndAge(@RequestParam String gender,@RequestParam String age){
         return new ToyListDTO(toyService.getToyFromGenderAndAge(gender,age));
     }
 }

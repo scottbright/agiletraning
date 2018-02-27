@@ -7,5 +7,5 @@ import java.util.List;
 
 
 public interface ToyService {
-    List<ToyListItemDTO> getToyFromGenderAndAge(String gender, Integer age);
+    List<ToyListItemDTO> getToyFromGenderAndAge(String gender, String age);
 }
