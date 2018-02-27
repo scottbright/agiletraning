@@ -6,17 +6,21 @@ angular
             templateUrl: 'search.html',
             controller: 'ProductSearchController'
         })
-        .when('/product/:param1', {
+        .when('/product/:userId/:productId', {
             templateUrl: 'product.html',
             controller: 'ProductdetailController'
         })
-        .when('/cart', {
+        .when('/cart/:userId', {
             templateUrl: 'shopping-cart.html',
             controller: 'ShoppingCartController'
         })
-        .when('/shipping', {
+        .when('/shipping/:userId', {
             templateUrl: 'shipping.html',
             controller: 'ShippingController'
+        })
+        .when('/thankyou/:userId', {
+            templateUrl: 'thankyou.html',
+            controller: 'ThankyouController'
         })
         .otherwise({
             redirectTo: '/search'

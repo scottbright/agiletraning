@@ -1,8 +1,8 @@
 angular
     .module("myapp")
-    .controller("ProductdetailController", function ($scope, $routeParams, $location, dataservice) {
+    .controller("ThankyouController", function ($scope, $routeParams, $location, dataservice) {
         // Using $routeParams
-        $scope.productID = $routeParams.productId;
+        $scope.productID = $routeParams.param1;
         $scope.dataservice = dataservice;
         $scope.toyDetail;
         $scope.quantityList = [];

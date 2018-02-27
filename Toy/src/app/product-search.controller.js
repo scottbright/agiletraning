@@ -3,7 +3,7 @@ angular
     .controller("ProductSearchController", function ($scope,$location, dataservice) {
     $scope.ages = ['all', '0','1', '2', '3', '4', '5', '6', '7', '8', '9 and more'];
     $scope.selectedAge = 'all';
-
+    
     $scope.genders = ['all', 'male', 'female'];
     $scope.selectedGender = 'neutral';
 
@@ -24,8 +24,8 @@ angular
     }
     $scope.search();
 
-    $scope.gotoProductDetail = function(ID){
-        $location.path('/product/'+ID);
+    $scope.gotoProductDetail = function(productId){
+        $location.path('/product/'+userId+'/'+productId);
     }
     
 });
