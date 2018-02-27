@@ -5,7 +5,8 @@ angular
             searchProduct: searchProduct,
             getProductDetailbyId: getProductDetailbyId,
             getShoppingCartItem: getShoppingCartItem,
-            getProvince: getProvince
+            getProvince: getProvince,
+            getOrderDetail: getOrderDetail
         };
 
         return dataservice;
@@ -37,5 +38,12 @@ angular
             var urlToJsonFile = './content/json/province.json';
             var promise = $http.get(urlToJsonFile);
             return promise;
+        }
+
+        function getOrderDetail(userId) {
+            // var url = '';
+            var urlToJsonFile = './content/json/orderdetail.json';
+            var promise = $http.get(urlToJsonFile);
+            return promise;            
         }
     });

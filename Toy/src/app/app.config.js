@@ -6,19 +6,19 @@ angular
             templateUrl: 'search.html',
             controller: 'ProductSearchController'
         })
-        .when('/product/:userId/:productId', {
+        .when('/product/:productId', {
             templateUrl: 'product.html',
             controller: 'ProductdetailController'
         })
-        .when('/cart/:userId', {
+        .when('/cart', {
             templateUrl: 'shopping-cart.html',
             controller: 'ShoppingCartController'
         })
-        .when('/shipping/:userId', {
+        .when('/shipping', {
             templateUrl: 'shipping.html',
             controller: 'ShippingController'
         })
-        .when('/thankyou/:userId', {
+        .when('/thankyou', {
             templateUrl: 'thankyou.html',
             controller: 'ThankyouController'
         })

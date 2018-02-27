@@ -28,6 +28,6 @@ angular
         }
         $scope.getProvince();
         $scope.confirm = function () {
-            $location.path('/thankyou/'+userId);
+            $location.path('/thankyou/');
         }
     });

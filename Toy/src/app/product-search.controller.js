@@ -11,7 +11,6 @@ angular
 
     $scope.toys;
     //activate function
-    
 
     $scope.search =  function(){
         $scope.dataService.searchProduct($scope.selectedAge, $scope.selectedGender)
@@ -25,7 +24,7 @@ angular
     $scope.search();
 
     $scope.gotoProductDetail = function(productId){
-        $location.path('/product/'+userId+'/'+productId);
+        $location.path('/product/' + productId);
     }
     
 });
