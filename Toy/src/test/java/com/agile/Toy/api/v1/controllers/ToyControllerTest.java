@@ -1,5 +1,6 @@
 package com.agile.Toy.api.v1.controllers;
 
+import com.agile.Toy.api.v1.Model.ToyDetailsDTO;
 import com.agile.Toy.api.v1.Model.ToyListItemDTO;
 import com.agile.Toy.api.v1.services.DefaultToyService;
 import org.junit.Test;
@@ -14,6 +15,7 @@ import org.springframework.test.web.servlet.MockMvc;
 import java.util.ArrayList;
 import java.util.List;
 
+import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.hasSize;
 import static org.junit.Assert.*;
 import static org.mockito.Matchers.any;
@@ -41,7 +43,6 @@ public class ToyControllerTest {
 
         ToyListItemDTO toyListItemDTO = new ToyListItemDTO();
         toyListItemDTO.setAge("3_to_5");
-        toyListItemDTO.setAvailability("Instock");
         toyListItemDTO.setBrand("GG");
         toyListItemDTO.setGender(gender);
 
@@ -53,6 +54,24 @@ public class ToyControllerTest {
             .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.ToyLists",hasSize(1)));
+    }
+
+    @Test
+    public void getToyDetailsTest() throws Exception {
+        Long id = 1L;
+
+        ToyDetailsDTO toyDetailsDTO = new ToyDetailsDTO();
+        toyDetailsDTO.setAge("3_to_5");
+        toyDetailsDTO.setBrand("GG");
+        toyDetailsDTO.setGender("Male");
+        toyDetailsDTO.setId(id);
+
+        when(defaultToyService.getToyDetails(any(Long.class))).thenReturn(toyDetailsDTO);
+
+        mvc.perform(get("/api/v1/toy/"+id)
+                .contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.id",equalTo(id.intValue())));
     }
 
 }

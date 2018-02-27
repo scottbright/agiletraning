@@ -1,5 +1,0 @@
-com/agile/Toy/api/v1/controllers/ToyControllerTest.class
-com/agile/Toy/api/v1/services/DefaultToyServiceTest.class
-com/agile/Toy/api/v1/services/DefaultToyServiceIntegrationTest.class
-com/agile/Toy/api/v1/Mappers/ToyListItemMapperTest.class
-com/agile/Toy/ToyAppApplicationTests.class

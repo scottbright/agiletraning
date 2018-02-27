@@ -1,6 +1,8 @@
 package com.agile.Toy.api.v1.Domain;
 
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -13,13 +15,13 @@ public class Toy {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String name;
-    private String brand;
-    private String age;
-    private String gender;
-    private String availability;
-    private Double price;
-    private Integer quantity;
+
+    private String ToyName;
+    private String Brand;
+    private String Age;
+    private String Gender;
+    private Double Price;
+    private Integer AmountInStock;
 
 
     public Long getId() {
@@ -30,59 +32,51 @@ public class Toy {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getToyName() {
+        return ToyName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setToyName(String toyName) {
+        ToyName = toyName;
     }
 
     public String getBrand() {
-        return brand;
+        return Brand;
     }
 
     public void setBrand(String brand) {
-        this.brand = brand;
+        Brand = brand;
     }
 
     public String getAge() {
-        return age;
+        return Age;
     }
 
     public void setAge(String age) {
-        this.age = age;
+        Age = age;
     }
 
     public String getGender() {
-        return gender;
+        return Gender;
     }
 
     public void setGender(String gender) {
-        this.gender = gender;
-    }
-
-    public String getAvailability() {
-        return availability;
-    }
-
-    public void setAvailability(String availability) {
-        this.availability = availability;
+        Gender = gender;
     }
 
     public Double getPrice() {
-        return price;
+        return Price;
     }
 
     public void setPrice(Double price) {
-        this.price = price;
+        Price = price;
     }
 
-    public Integer getQuantity() {
-        return quantity;
+    public Integer getAmountInStock() {
+        return AmountInStock;
     }
 
-    public void setQuantity(Integer quantity) {
-        this.quantity = quantity;
+    public void setAmountInStock(Integer amountInStock) {
+        AmountInStock = amountInStock;
     }
 }
