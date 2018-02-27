@@ -1,0 +1,32 @@
+"ID";"ToyName";"Gender";"Age";"Price";"Brand";"AmountInStock"
+1;"Balance Training Bicycle";"Neutral";3;119.95;"SportsFun";25
+2;"43 Piece Dinner Set";"Female";3;12.95;"CoolKidz";25
+3;"Horses and Unicorns Set";"Neutral";3;24.95;"CoolKidz";25
+4;"Hoppity Ball 26 inch";"Neutral";3;29.95;"SportsFun";25
+5;"Sleeping Queen Board Game";"Female";3;12.95;"CoolKidz";0
+6;"Princess Palace";"Female";3;24.95;"CoolKidz";25
+7;"Best Friends Forever Magnetic Dress Up";"Female";3;24.95;"CoolKidz";25
+8;"City Garage Truck Lego";"Neutral";3;19.95;"Lego";0
+9;"Kettrike";"Neutral";3;249.95;"SportsFun";0
+10;"Princess Training Bicycle";"Female";3;119.95;"SportsFun";0
+11;"Earth DVD Game";"Neutral";9;34.99;"VideoVroom";25
+12;"Twilight Board Game";"Neutral";9;24.95;"GeekToys";25
+13;"Settlers of Catan Board Game";"Neutral";9;44.95;"GeekToys";25
+14;"OMG - Gossip Girl Board Game";"Female";9;24.95;"GeekToys";25
+15;"Sailboat";"Male";9;24.95;"CoolKidz";25
+16;"Scrabble";"Neutral";9;19.95;"GeekToys";25
+17;"Star Wars Darth Vader Lego";"Male";6;39.95;"GeekToys";25
+18;"Snoopy Sno-Cone Machine";"Neutral";6;24.95;"Modelz";25
+19;"Gourmet Cupcake Maker";"Female";6;39.95;"CoolKidz";25
+20;"Creator Beach House Lego";"Neutral";6;39.95;"Lego";0
+21;"Jacques the Peacock Play and Grow";"Neutral";1;12.95;"CoolKidz";25
+22;"Nutbrown Hare";"Neutral";0;12.99;"CoolKidz";0
+23;"Dancing Aligator";"Neutral";0;19.95;"CoolKidz";0
+24;"Mashaka the Monkey";"Neutral";0;36.95;"BarnyardBlast";25
+25;"Sleep Sheep";"Neutral";0;39.0;"BarnyardBlast";25
+26;"Les Dollie Toffee Apple";"Female";1;24.95;"CoolKidz";25
+27;"Sand Play Set";"Neutral";1;24.95;"Modelz";25
+28;"Melody Express Musical Train";"Male";1;42.95;"Modelz";25
+29;"My First Lego Duplo Set";"Neutral";1;19.95;"Lego";25
+30;"Fisher-Price stroller";"Female";1;25.99;"CoolKidz";25
+31;"Mortimer the Moose Play and Grow";"Neutral";1;12.95;"CoolKidz";25
