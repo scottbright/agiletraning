@@ -10,6 +10,14 @@ angular
             templateUrl: 'product.html',
             controller: 'ProductdetailController'
         })
+        .when('/cart', {
+            templateUrl: 'shopping-cart.html',
+            controller: 'ShoppingCartController'
+        })
+        .when('/shipping', {
+            templateUrl: 'shipping.html',
+            controller: 'ShippingController'
+        })
         .otherwise({
             redirectTo: '/search'
         });
