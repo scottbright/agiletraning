@@ -1,20 +1,10 @@
-package com.agile.Toy.api.v1.Domain;
-
+package com.agile.Toy.api.v1.Model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+public class ToyDetailsDTO {
 
-@Entity(name = "ToyLists")
-public class Toy {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
 
     private String ToyName;
     private String Brand;
@@ -22,6 +12,7 @@ public class Toy {
     private String Gender;
     private Double Price;
     private Integer AmountInStock;
+    private String PictureURL;
 
 
     public Long getId() {
@@ -78,5 +69,13 @@ public class Toy {
 
     public void setAmountInStock(Integer amountInStock) {
         AmountInStock = amountInStock;
+    }
+
+    public String getPictureURL() {
+        return PictureURL;
+    }
+
+    public void setPictureURL(String pictureURL) {
+        PictureURL = pictureURL;
     }
 }

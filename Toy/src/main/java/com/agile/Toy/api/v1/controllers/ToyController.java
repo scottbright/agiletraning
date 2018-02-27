@@ -1,5 +1,6 @@
 package com.agile.Toy.api.v1.controllers;
 
+import com.agile.Toy.api.v1.Model.ToyDetailsDTO;
 import com.agile.Toy.api.v1.Model.ToyListDTO;
 import com.agile.Toy.api.v1.services.ToyService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,5 +29,10 @@ public class ToyController {
     @ResponseStatus(HttpStatus.OK)
     public ToyListDTO getToyListByGenderAndAge(@RequestParam String gender,@RequestParam String age){
         return new ToyListDTO(toyService.getToyFromGenderAndAge(gender,age));
+    }
+    @GetMapping("/toy/{id}")
+    @ResponseStatus(HttpStatus.OK)
+    public ToyDetailsDTO getToyDetailsById(@PathVariable Long id){
+        return toyService.getToyDetails(id);
     }
 }

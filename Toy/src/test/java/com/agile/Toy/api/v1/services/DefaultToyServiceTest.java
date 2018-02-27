@@ -2,6 +2,7 @@ package com.agile.Toy.api.v1.services;
 
 import com.agile.Toy.api.v1.Domain.Toy;
 import com.agile.Toy.api.v1.Mappers.ToyListItemMapper;
+import com.agile.Toy.api.v1.Model.ToyDetailsDTO;
 import com.agile.Toy.api.v1.Model.ToyListItemDTO;
 import com.agile.Toy.api.v1.Repositories.ToyListsRepository;
 import org.junit.Before;
@@ -15,6 +16,7 @@ import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Matchers.any;
+import static org.mockito.Matchers.anyLong;
 import static org.mockito.Matchers.anyString;
 import static org.mockito.Mockito.when;
 
@@ -87,5 +89,18 @@ public class DefaultToyServiceTest {
     }
 
 
+    @Test
+    public void getItemInfoTest(){
+        Long id = 1L;
 
+        Toy toy = new Toy();
+        toy.setId(1L);
+
+        when(toyListsRepository.findOne(anyLong())).thenReturn(toy);
+
+        ToyDetailsDTO toyDetailsDTO = defaultToyService.getToyDetails(id);
+
+        assertEquals(id,toyDetailsDTO.getId());
+
+    }
 }
