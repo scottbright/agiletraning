@@ -5,11 +5,11 @@ describe('Shopping-cart controller', function() {
     var $controller;
     
     beforeEach(function() {
-        angular.mock.module('myapp');
+        angular.module("myapp", ['ngRoute', 'ngMaterial']);
 
         inject(function(_$rootScope_, _$controller_){
             $rootScope = _$rootScope_;
-            $scope = _$rootScope.$new();
+            $scope = _$rootScope_.$new();
             $controller = _$controller_;
         });
     });
@@ -18,9 +18,11 @@ describe('Shopping-cart controller', function() {
 
         expect(2+2).toEqual(4);
     });
-    /*
+    
     it('should calculate the subtotal amount correctly', function() {
-        $controller('ShoppingCartController', {$scope:$scope});
+        $controller('ShoppingCartController', { $scope:$scope });
+        //$controller("ShoppingCartController", function ($scope, $routeParams, $location, dataservice);
+
         $scope.shoppingCartItem = [
             {
                 "ID":1,
@@ -47,5 +49,5 @@ describe('Shopping-cart controller', function() {
         $scope.calculateSubTotal();
         expect($scope.subTotal).toEqual(4250);
     });
-    */
+    
 });

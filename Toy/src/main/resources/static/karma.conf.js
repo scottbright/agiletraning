@@ -16,17 +16,17 @@ module.exports = function(config) {
     // list of files / patterns to load in the browser
     files: [
       
-      './content/js/angular.js',
-      './node_modules/angular-mocks/angular-mocks.js',
+      'content/js/angular.js',
+      'node_modules/angular-mocks/angular-mocks.js',
       
-      './content/js/angular-route.js"',
-      './content/js/angular-animate.js',
-      './content/js/angular-aria.js',
-      './content/js/angular-messages.js',
-      './content/js/angular-material.min.js',
-      './app.module.js',
-      './shopping-cart.controller.js',
-      './shopping-cart.controller.spec.js'
+      'content/js/angular-route.js"',
+      'content/js/angular-animate.js',
+      'content/js/angular-aria.js',
+      'content/js/angular-messages.js',
+      'content/js/angular-material.min.js',
+      'app.module.js',
+      'shopping-cart.controller.js',
+      'shopping-cart.controller.spec.js'
     ],
 
     // list of files / patterns to exclude
