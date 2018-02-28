@@ -1,6 +1,8 @@
 package com.agile.Toy.api.v1.Mappers;
 
+import com.agile.Toy.api.v1.Domain.CartEntities;
 import com.agile.Toy.api.v1.Domain.Toy;
+import com.agile.Toy.api.v1.Model.CartDTO;
 import com.agile.Toy.api.v1.Model.ToyDetailsDTO;
 import com.agile.Toy.api.v1.Model.ToyListItemDTO;
 import javax.annotation.Generated;
@@ -8,7 +10,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2018-02-28T14:25:56+0700",
+    date = "2018-02-28T14:48:05+0700",
     comments = "version: 1.2.0.CR2, compiler: javac, environment: Java 1.8.0_161 (Oracle Corporation)"
 )
 @Component
@@ -50,5 +52,22 @@ public class ToyListItemMapperImpl implements ToyListItemMapper {
         toyDetailsDTO.setAmountInStock( toy.getAmountInStock() );
 
         return toyDetailsDTO;
+    }
+
+    @Override
+    public CartDTO CartToCartDTO(CartEntities cart) {
+        if ( cart == null ) {
+            return null;
+        }
+
+        CartDTO cartDTO = new CartDTO();
+
+        cartDTO.setCartId( cart.getCartId() );
+        cartDTO.setToyId( cart.getToyId() );
+        if ( cart.getOrderQuantity() != null ) {
+            cartDTO.setOrderQuantity( String.valueOf( cart.getOrderQuantity() ) );
+        }
+
+        return cartDTO;
     }
 }

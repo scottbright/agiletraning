@@ -1,6 +1,8 @@
 package com.agile.Toy.api.v1.Mappers;
 
+import com.agile.Toy.api.v1.Domain.CartEntities;
 import com.agile.Toy.api.v1.Domain.Toy;
+import com.agile.Toy.api.v1.Model.CartDTO;
 import com.agile.Toy.api.v1.Model.ToyDetailsDTO;
 import com.agile.Toy.api.v1.Model.ToyListItemDTO;
 import org.junit.Before;
@@ -53,6 +55,20 @@ public class ToyListItemMapperTest {
         assertEquals(toy.getPrice(),toyListItemDTO.getPrice());
         assertEquals(toy.getId(),toyListItemDTO.getId());
         assertEquals(toy.getAmountInStock(),toyListItemDTO.getAmountInStock());
+    }
+
+    @Test
+    public void CartToCartDTO() {
+        CartEntities cart = new CartEntities();
+        cart.setCartId(1l);
+        cart.setId(1L);
+        cart.setOrderQuantity(10);
+        cart.setToyId(15l);
+
+        CartDTO cartDTO = toyListItemMapper.CartToCartDTO(cart);
+        assertEquals(cart.getCartId(),cartDTO.getCartId());
+        assertEquals(cart.getOrderQuantity(),cartDTO.getOrderQuantity());
+        assertEquals(cart.getToyId(),cartDTO.getToyId());
     }
 
 
