@@ -15,9 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.Assert.assertEquals;
-import static org.mockito.Matchers.any;
 import static org.mockito.Matchers.anyLong;
-import static org.mockito.Matchers.anyString;
 import static org.mockito.Mockito.when;
 
 @RunWith(MockitoJUnitRunner.class)
@@ -36,7 +34,7 @@ public class DefaultToyServiceTest {
     @Test
     public void getToyListItemByGenderAndAgeLessThanOne(){
         String gender = "Male";
-        String age = "Baby";
+        String age = "0";
 
         Toy toy = new Toy();
         toy.setAge(age);
@@ -49,12 +47,12 @@ public class DefaultToyServiceTest {
 
         List<ToyListItemDTO> toyListItemDTO = defaultToyService.getToyFromGenderAndAge(gender,"0");
 
-        assertEquals("Baby",toyListItemDTO.get(0).getAge());
+        assertEquals("0",toyListItemDTO.get(0).getAge());
     }
     @Test
     public void getToyListItemByGenderAndAge3_to_5(){
         String gender = "Male";
-        String age = "3_to_5";
+        String age = "3";
 
         Toy toy = new Toy();
         toy.setAge(age);
@@ -62,17 +60,16 @@ public class DefaultToyServiceTest {
         List<Toy> toys = new ArrayList<Toy>();
         toys.add(toy);
 
-
         when(toyListsRepository.getByGenderAndAge(gender,age)).thenReturn(toys);
 
         List<ToyListItemDTO> toyListItemDTO = defaultToyService.getToyFromGenderAndAge(gender,"4");
 
-        assertEquals("3_to_5",toyListItemDTO.get(0).getAge());
+        assertEquals("3",toyListItemDTO.get(0).getAge());
     }
     @Test
     public void getToyListItemAllAgeAllGender(){
         String gender = "Female";
-        String age = "3_to_5";
+        String age = "3";
 
         Toy toy = new Toy();
         toy.setAge(age);
@@ -85,10 +82,8 @@ public class DefaultToyServiceTest {
 
         List<ToyListItemDTO> toyListItemDTO = defaultToyService.getToyFromGenderAndAge("All","All");
 
-        assertEquals("3_to_5",toyListItemDTO.get(0).getAge());
+        assertEquals("3",toyListItemDTO.get(0).getAge());
     }
-
-
     @Test
     public void getItemInfoTest(){
         Long id = 1L;
