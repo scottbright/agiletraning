@@ -20,9 +20,10 @@ angular
                 .then(
                     function (response) {
                         $scope.provinceList = response.data;
+                        console.log(response);
                     },
                     function (err) { 
-                        
+                        console.log("error");
                     }
                 );
         }
