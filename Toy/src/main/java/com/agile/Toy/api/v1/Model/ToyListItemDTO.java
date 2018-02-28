@@ -9,6 +9,7 @@ public class ToyListItemDTO {
     private String Age;
     private String Gender;
     private Double Price;
+    private Integer AmountInStock;
 
 
     public Long getId() {
@@ -57,5 +58,13 @@ public class ToyListItemDTO {
 
     public void setPrice(Double price) {
         Price = price;
+    }
+
+    public Integer getAmountInStock() {
+        return AmountInStock;
+    }
+
+    public void setAmountInStock(Integer amountInStock) {
+        AmountInStock = amountInStock;
     }
 }
