@@ -26,7 +26,7 @@ public class Bootstrap implements CommandLineRunner{
 
         Toy toy1 = new Toy();
         toy1.setToyName("43 Piece dinner set");
-        toy1.setGender("Female");
+        toy1.setGender("female");
         toy1.setAge("3");
         toy1.setPrice(12.95);
         toy1.setBrand("CoolKids");
@@ -42,7 +42,7 @@ public class Bootstrap implements CommandLineRunner{
 
         Toy toy3 = new Toy();
         toy3.setToyName("Best Friends Forever Magnetic Dress Up");
-        toy3.setGender("Female");
+        toy3.setGender("female");
         toy3.setAge("9");
         toy3.setPrice(24.95);
         toy3.setBrand("CoolKids");
@@ -58,7 +58,7 @@ public class Bootstrap implements CommandLineRunner{
 
         Toy toy5 = new Toy();
         toy5.setToyName("Goumet Cupcake Baker");
-        toy5.setGender("Female");
+        toy5.setGender("female");
         toy5.setAge("6");
         toy5.setPrice(19.95);
         toy5.setBrand("CoolKids");
