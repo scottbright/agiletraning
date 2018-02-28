@@ -15,6 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.Assert.assertEquals;
+import static org.mockito.Matchers.any;
 import static org.mockito.Matchers.anyLong;
 import static org.mockito.Mockito.when;
 
@@ -43,7 +44,7 @@ public class DefaultToyServiceTest {
         toys.add(toy);
 
 
-        when(toyListsRepository.getByGenderAndAge(gender,age)).thenReturn(toys);
+        when(toyListsRepository.getByGenderAndAge(any(String.class),any(String.class))).thenReturn(toys);
 
         List<ToyListItemDTO> toyListItemDTO = defaultToyService.getToyFromGenderAndAge(gender,"0");
 
@@ -60,9 +61,9 @@ public class DefaultToyServiceTest {
         List<Toy> toys = new ArrayList<Toy>();
         toys.add(toy);
 
-        when(toyListsRepository.getByGenderAndAge(gender,age)).thenReturn(toys);
+        when(toyListsRepository.getByGenderAndAge(any(String.class),any(String.class))).thenReturn(toys);
 
-        List<ToyListItemDTO> toyListItemDTO = defaultToyService.getToyFromGenderAndAge(gender,"4");
+        List<ToyListItemDTO> toyListItemDTO = defaultToyService.getToyFromGenderAndAge(gender,"3");
 
         assertEquals("3",toyListItemDTO.get(0).getAge());
     }
@@ -76,6 +77,7 @@ public class DefaultToyServiceTest {
 
         List<Toy> toys = new ArrayList<Toy>();
         toys.add(toy);
+
 
 
         when(toyListsRepository.getByGenderAndAge("%","%")).thenReturn(toys);
