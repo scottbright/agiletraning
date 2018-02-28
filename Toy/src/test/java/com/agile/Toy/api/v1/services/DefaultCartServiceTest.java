@@ -17,7 +17,8 @@ public class DefaultCartServiceTest {
     @Test
     public void addToCartTest(){
         CartDTO cartDTO = new CartDTO();
-        cartService.addToCart(cartDTO);
+
+        CartDTO result = cartService.addToCart(cartDTO);
 
     }
 
