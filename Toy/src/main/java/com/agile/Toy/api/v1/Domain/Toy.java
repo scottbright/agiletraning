@@ -1,5 +1,7 @@
 package com.agile.Toy.api.v1.Domain;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -12,7 +14,7 @@ public class Toy {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-
+    @JsonProperty("ToyName")
     private String ToyName;
     private String Brand;
     private String Age;
