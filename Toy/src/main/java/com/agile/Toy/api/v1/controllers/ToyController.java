@@ -20,6 +20,7 @@ public class ToyController {
         this.toyService = toyService;
     }
 
+    @CrossOrigin(origins = "128.199.190.215:8080")
     @GetMapping
     public String hello(){
         return "hello world";

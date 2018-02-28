@@ -42,6 +42,6 @@ public class ToyControllerIntegrationTest {
                 .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.id",equalTo(1)))
-                .andExpect(jsonPath("$.ToyName",equalTo("43 Piece dinner set")));
+                .andExpect(jsonPath("$.toyName",equalTo("43 Piece dinner set")));
     }
 }
