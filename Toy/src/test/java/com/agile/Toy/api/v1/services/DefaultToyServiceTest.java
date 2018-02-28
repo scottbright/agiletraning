@@ -85,6 +85,24 @@ public class DefaultToyServiceTest {
         assertEquals("3",toyListItemDTO.get(0).getAge());
     }
     @Test
+    public void getToyListItemLowerCase(){
+        String gender = "Female";
+        String age = "3";
+
+        Toy toy = new Toy();
+        toy.setAge(age);
+
+        List<Toy> toys = new ArrayList<Toy>();
+        toys.add(toy);
+
+
+        when(toyListsRepository.getByGenderAndAge("%","%")).thenReturn(toys);
+
+        List<ToyListItemDTO> toyListItemDTO = defaultToyService.getToyFromGenderAndAge("all","all");
+
+        assertEquals("3",toyListItemDTO.get(0).getAge());
+    }
+    @Test
     public void getItemInfoTest(){
         Long id = 1L;
 

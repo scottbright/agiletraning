@@ -40,12 +40,14 @@ public class DefaultToyService implements ToyService{
     }
 
     private String convertGender(String gender){
+        gender = gender.toLowerCase();
         if(isAll(gender))
             gender = "%";
         return gender;
     }
 
     private String convertAge(String age) {
+        age = age.toLowerCase();
         if (isAll(age)) {
             return "%";
         }
@@ -65,7 +67,7 @@ public class DefaultToyService implements ToyService{
     }
 
     private boolean isAll(String age) {
-        return age.equals("All");
+        return age.equals("all");
     }
 
     private boolean isSixToEight(Integer ageInt) {
