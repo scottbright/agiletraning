@@ -14,7 +14,6 @@ public class Toy {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @JsonProperty("ToyName")
     private String ToyName;
     private String Brand;
     private String Age;

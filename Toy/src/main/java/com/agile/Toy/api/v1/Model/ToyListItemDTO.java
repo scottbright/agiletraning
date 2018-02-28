@@ -7,7 +7,6 @@ public class ToyListItemDTO {
 
     private Long id;
 
-    @JsonProperty("ToyName")
     private String ToyName;
     private String Brand;
     private String Age;
