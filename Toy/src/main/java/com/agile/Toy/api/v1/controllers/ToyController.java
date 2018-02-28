@@ -5,7 +5,6 @@ import com.agile.Toy.api.v1.Model.ToyListDTO;
 import com.agile.Toy.api.v1.services.ToyService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -20,6 +19,8 @@ public class ToyController {
     {
         this.toyService = toyService;
     }
+
+    @CrossOrigin(origins = "128.199.190.215:8080")
     @GetMapping
     public String hello(){
         return "hello world";
@@ -30,6 +31,7 @@ public class ToyController {
     public ToyListDTO getToyListByGenderAndAge(@RequestParam String gender,@RequestParam String age){
         return new ToyListDTO(toyService.getToyFromGenderAndAge(gender,age));
     }
+
     @GetMapping("/toy/{id}")
     @ResponseStatus(HttpStatus.OK)
     public ToyDetailsDTO getToyDetailsById(@PathVariable Long id){

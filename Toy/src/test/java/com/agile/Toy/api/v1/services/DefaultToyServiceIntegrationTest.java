@@ -1,19 +1,21 @@
 package com.agile.Toy.api.v1.services;
 
 import com.agile.Toy.Bootstrap.Bootstrap;
+import com.agile.Toy.ToyAppApplication;
 import com.agile.Toy.api.v1.Domain.Toy;
 import com.agile.Toy.api.v1.Mappers.ToyListItemMapper;
 import com.agile.Toy.api.v1.Model.ToyDetailsDTO;
-import com.agile.Toy.api.v1.Model.ToyListDTO;
+
 import com.agile.Toy.api.v1.Model.ToyListItemDTO;
 import com.agile.Toy.api.v1.Repositories.ToyListsRepository;
-import lombok.Data;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.test.annotation.DirtiesContext;
+import org.springframework.test.context.ActiveProfiles;
+import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.List;
@@ -23,12 +25,14 @@ import static org.junit.Assert.assertEquals;
 @RunWith(SpringRunner.class)
 @DataJpaTest
 @DirtiesContext(classMode = DirtiesContext.ClassMode.AFTER_EACH_TEST_METHOD)
+@ActiveProfiles("Test")
 public class DefaultToyServiceIntegrationTest {
     private Bootstrap bootstrap;
 
     private ToyService toyService;
     @Autowired
     ToyListsRepository toyListsRepository;
+
     @Before
     public void setup() throws Exception {
         bootstrap = new Bootstrap(toyListsRepository);
@@ -36,18 +40,37 @@ public class DefaultToyServiceIntegrationTest {
 
         toyService = new DefaultToyService(toyListsRepository, ToyListItemMapper.INSTANCE);
     }
-
     @Test
-    public void getToyListItemByGenderAndAgeIntegrationTest(){
+    public void getToyListItemByFemaleAndZero(){
         String gender = "Female";
-        String age = "3";
+        String age = "0";
 
         List<ToyListItemDTO> toyListItemDTOs= toyService.getToyFromGenderAndAge(gender,age);
 
-        assertEquals(2,toyListItemDTOs.size());
-        assertEquals("3_to_5",toyListItemDTOs.get(0).getAge());
+        assertEquals(1,toyListItemDTOs.size());
+        assertEquals("0",toyListItemDTOs.get(0).getAge());
+    }
 
+    @Test
+    public void getToyListItemByFemaleAndSix(){
+        String gender = "Female";
+        String age = "6";
 
+        List<ToyListItemDTO> toyListItemDTOs= toyService.getToyFromGenderAndAge(gender,age);
+
+        assertEquals(1,toyListItemDTOs.size());
+        assertEquals("6",toyListItemDTOs.get(0).getAge());
+    }
+
+    @Test
+    public void getToyListItemByFemaleAndNine(){
+        String gender = "Female";
+        String age = "9";
+
+        List<ToyListItemDTO> toyListItemDTOs= toyService.getToyFromGenderAndAge(gender,age);
+
+        assertEquals(1,toyListItemDTOs.size());
+        assertEquals("9",toyListItemDTOs.get(0).getAge());
     }
     @Test
     public void getToyListItemByAllGenderAge(){
@@ -56,7 +79,17 @@ public class DefaultToyServiceIntegrationTest {
 
         List<ToyListItemDTO> toyListItemDTOs= toyService.getToyFromGenderAndAge(gender,age);
 
-        assertEquals(4,toyListItemDTOs.size());
+        assertEquals(5,toyListItemDTOs.size());
+
+    }
+    @Test
+    public void getToyListItemByAllGenderAgeLowercase(){
+        String gender = "alL";
+        String age = "aLl";
+
+        List<ToyListItemDTO> toyListItemDTOs= toyService.getToyFromGenderAndAge(gender,age);
+
+        assertEquals(5,toyListItemDTOs.size());
 
     }
     @Test

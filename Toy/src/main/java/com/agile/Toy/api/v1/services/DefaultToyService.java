@@ -8,9 +8,7 @@ import com.agile.Toy.api.v1.Repositories.ToyListsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 @Service
@@ -29,11 +27,8 @@ public class DefaultToyService implements ToyService{
     @Override
     public List<ToyListItemDTO> getToyFromGenderAndAge(String gender,String age) {
 
-        if(gender.equals("All"))
-            gender = "%";
 
-        List<Toy> toyList = toyListsRepository.getByGenderAndAge(gender,convertAge(age));
-        System.out.println(toyList.size());
+        List<Toy> toyList = toyListsRepository.getByGenderAndAge(convertGender(gender),convertAge(age));
         return toyList.stream()
                 .map(toyListItemMapper::ToyToToyListItemDTO)
                 .collect(Collectors.toList());
@@ -41,28 +36,55 @@ public class DefaultToyService implements ToyService{
 
     @Override
     public ToyDetailsDTO getToyDetails(Long id) {
-        for(Toy toy : toyListsRepository.findAll()){
-        }
+
         return toyListItemMapper.ToyToToyDetailsDTO(toyListsRepository.findOne(id));
     }
 
+    private String convertGender(String gender){
+        gender = gender.toLowerCase();
+        if(isAll(gender))
+            gender = "%";
+        return gender;
+    }
+
     private String convertAge(String age) {
-        if (age.equals("All")) {
+        age = age.toLowerCase();
+        if (isAll(age)) {
             return "%";
         }
         else {
             Integer ageInt = Integer.parseInt(age);
-            if (ageInt < 1)
+            if (isBaby(ageInt))
                 return "0";
-            if (ageInt >= 1 && ageInt < 3)
+            if (isToddler(ageInt))
                 return "1";
-            if (ageInt >= 3 && ageInt <= 5)
+            if (isThreeToFive(ageInt))
                 return "3";
-            if (ageInt >= 5 && ageInt <= 8)
+            if (isSixToEight(ageInt))
                 return "6";
-            else
-                return "9";
+            return "9";
         }
     }
+
+    private boolean isAll(String age) {
+        return age.equals("all");
+    }
+
+    private boolean isSixToEight(Integer ageInt) {
+        return ageInt >= 5 && ageInt <= 8;
+    }
+
+    private boolean isThreeToFive(Integer ageInt) {
+        return (ageInt >= 3 && ageInt <= 5);
+    }
+
+    private boolean isToddler(Integer ageInt) {
+        return ageInt >= 1 && ageInt < 3;
+    }
+
+    private boolean isBaby(Integer ageInt) {
+        return ageInt < 1;
+    }
+
 
 }

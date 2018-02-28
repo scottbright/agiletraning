@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2018-02-27T16:37:15+0700",
+    date = "2018-02-28T14:25:56+0700",
     comments = "version: 1.2.0.CR2, compiler: javac, environment: Java 1.8.0_161 (Oracle Corporation)"
 )
 @Component
@@ -28,6 +28,7 @@ public class ToyListItemMapperImpl implements ToyListItemMapper {
         toyListItemDTO.setAge( toy.getAge() );
         toyListItemDTO.setGender( toy.getGender() );
         toyListItemDTO.setPrice( toy.getPrice() );
+        toyListItemDTO.setAmountInStock( toy.getAmountInStock() );
 
         return toyListItemDTO;
     }

@@ -8,6 +8,8 @@ import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMock
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
 import org.springframework.test.annotation.DirtiesContext;
+import org.springframework.test.context.ActiveProfiles;
+import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
@@ -21,6 +23,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @RunWith(SpringRunner.class)
 @AutoConfigureMockMvc
 @DirtiesContext(classMode = DirtiesContext.ClassMode.AFTER_EACH_TEST_METHOD)
+@ActiveProfiles("Test")
 public class ToyControllerIntegrationTest {
 
     @Autowired
@@ -31,7 +34,7 @@ public class ToyControllerIntegrationTest {
         mockMvc.perform(get("/api/v1/toyList?gender=All&age=All")
             .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$.ToyLists",hasSize(4)));
+                .andExpect(jsonPath("$.ToyLists",hasSize(5)));
     }
 
     @Test
@@ -40,6 +43,6 @@ public class ToyControllerIntegrationTest {
                 .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.id",equalTo(1)))
-                .andExpect(jsonPath("$.name",equalTo("43 Piece dinner set")));
+                .andExpect(jsonPath("$.toyName",equalTo("43 Piece dinner set")));
     }
 }

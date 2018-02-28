@@ -1,6 +1,5 @@
 package com.agile.Toy.api.v1.Model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ToyDetailsDTO {
 
