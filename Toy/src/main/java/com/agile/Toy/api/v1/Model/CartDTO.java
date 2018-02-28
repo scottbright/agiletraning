@@ -1,16 +1,18 @@
 package com.agile.Toy.api.v1.Model;
 
 public class CartDTO {
-    private Long CcrtId;
-    private Long toyId;
-    private String orderQuantity;
 
-    public Long getCcrtId() {
-        return CcrtId;
+    private Long id;
+    private Long cartId;
+    private Long toyId;
+    private Integer orderQuantity;
+
+    public Long getCartId() {
+        return cartId;
     }
 
-    public void setCcrtId(Long ccrtId) {
-        CcrtId = ccrtId;
+    public void setCartId(Long cartId) {
+        this.cartId = cartId;
     }
 
     public Long getToyId() {
@@ -21,11 +23,19 @@ public class CartDTO {
         this.toyId = toyId;
     }
 
-    public String getOrderQuantity() {
+    public Integer getOrderQuantity() {
         return orderQuantity;
     }
 
-    public void setOrderQuantity(String orderQuantity) {
+    public void setOrderQuantity(Integer orderQuantity) {
         this.orderQuantity = orderQuantity;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 }
