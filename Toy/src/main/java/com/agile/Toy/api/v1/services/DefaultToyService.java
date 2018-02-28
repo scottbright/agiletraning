@@ -27,6 +27,7 @@ public class DefaultToyService implements ToyService{
     @Override
     public List<ToyListItemDTO> getToyFromGenderAndAge(String gender,String age) {
 
+
         List<Toy> toyList = toyListsRepository.getByGenderAndAge(convertGender(gender),convertAge(age));
         return toyList.stream()
                 .map(toyListItemMapper::ToyToToyListItemDTO)
@@ -61,8 +62,7 @@ public class DefaultToyService implements ToyService{
                 return "3";
             if (isSixToEight(ageInt))
                 return "6";
-            else
-                return "9";
+            return "9";
         }
     }
 
@@ -75,7 +75,7 @@ public class DefaultToyService implements ToyService{
     }
 
     private boolean isThreeToFive(Integer ageInt) {
-        return ageInt >= 3 && ageInt <= 5;
+        return (ageInt >= 3 && ageInt <= 5);
     }
 
     private boolean isToddler(Integer ageInt) {
