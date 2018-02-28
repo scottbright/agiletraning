@@ -1,10 +1,12 @@
 com/agile/Toy/api/v1/Model/ToyListItemDTO.class
 com/agile/Toy/ToyAppApplication.class
 com/agile/Toy/api/v1/Domain/Toy.class
+com/agile/Toy/api/v1/Mappers/CartMapper.class
 com/agile/Toy/api/v1/services/ToyService.class
 com/agile/Toy/api/v1/Mappers/ToyListItemMapper.class
 com/agile/Toy/api/v1/Domain/CartEntities.class
 com/agile/Toy/Bootstrap/Bootstrap.class
+com/agile/Toy/api/v1/Mappers/CartMapperImpl.class
 com/agile/Toy/api/v1/Model/CartDTO.class
 com/agile/Toy/api/v1/Repositories/ToyListsRepository.class
 com/agile/Toy/api/v1/Mappers/ToyListItemMapperImpl.class

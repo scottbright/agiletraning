@@ -21,7 +21,7 @@ public class DefaultCartServiceTest {
 
         CartDTO result = cartService.addToCart(cartDTO);
 
-        //assertEquals(result.getCartId(),cartDTO.getCartId());
+//        assertEquals(result.getCartId(),cartDTO.getCartId());
 
     }
 
