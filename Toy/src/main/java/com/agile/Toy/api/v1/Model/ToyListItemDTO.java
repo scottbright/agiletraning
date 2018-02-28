@@ -1,8 +1,5 @@
 package com.agile.Toy.api.v1.Model;
 
-
-import com.fasterxml.jackson.annotation.JsonProperty;
-
 public class ToyListItemDTO {
 
     private Long id;

@@ -23,16 +23,16 @@ import java.util.List;
 import static org.junit.Assert.assertEquals;
 
 @RunWith(SpringRunner.class)
-@TestPropertySource("classpath:test.properties")
 @DataJpaTest
 @DirtiesContext(classMode = DirtiesContext.ClassMode.AFTER_EACH_TEST_METHOD)
-@ActiveProfiles("test")
+@ActiveProfiles("Test")
 public class DefaultToyServiceIntegrationTest {
     private Bootstrap bootstrap;
 
     private ToyService toyService;
     @Autowired
     ToyListsRepository toyListsRepository;
+
     @Before
     public void setup() throws Exception {
         bootstrap = new Bootstrap(toyListsRepository);
