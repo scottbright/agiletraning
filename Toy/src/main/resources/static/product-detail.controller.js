@@ -12,18 +12,30 @@ angular
                 .then(
                     function (response) {
                         $scope.toyDetail = response.data;
-                        for(var i=1;i<$scope.toyDetail && i<=25;i++){
+                        for(var i=1;i<$scope.toyDetail.amountInStock && i<=25;i++){
                             $scope.quantityList.push(i);
                         }
                     },
                     function (err) { 
-                        
+                        console.log(err);
                     }
                 );
         }
         $scope.getProductDetail();
+
         $scope.addToCart = function () {
-            $location.path('/cart');
+            
+            //call API to push product to cart
+            dataservice.addProductToCart($scope.productID, scope.selectedQuantity)
+                .then(
+                    function (response) {
+                        console.log(response);
+                        $location.path('/cart');
+                    },
+                    function (err) { 
+                        console.log(err);
+                    }
+                );
         }
 
         $scope.back = function () {

@@ -2,10 +2,10 @@ angular
     .module("myapp")
     .controller("ProductSearchController", function ($scope,$location, dataservice) {
     $scope.ages = ['all', '0','1', '2', '3', '4', '5', '6', '7', '8', '9 and more'];
-    $scope.selectedAge = 'all';
+    $scope.selectedAge = 'All';
     
     $scope.genders = ['all', 'male', 'female'];
-    $scope.selectedGender = 'neutral';
+    $scope.selectedGender = 'All';
 
     $scope.dataService =  dataservice;
 
@@ -16,9 +16,11 @@ angular
         $scope.dataService.searchProduct($scope.selectedAge, $scope.selectedGender)
             .then(
                 function (response){ 
-                    $scope.toys = response.data;
+                    $scope.toys = response.data.ToyLists;
                 },
-                function (err) { }
+                function (err) { 
+                    console.log(err);
+                }
         );
     }
     $scope.search();

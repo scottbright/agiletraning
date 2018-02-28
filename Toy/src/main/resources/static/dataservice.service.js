@@ -8,23 +8,37 @@ angular
             getProvince: getProvince,
             getOrderDetail: getOrderDetail
         };
+        var urlDev = 'https://crossorigin.me/http://128.199.190.215:8080';
+        var urlProd = 'https://crossorigin.me/http://188.166.211.237:8080';
 
         return dataservice;
 
         function searchProduct(age, gender) {
-            //var url = '';
-            var urlToJsonFile = './content/json/toys.json';
-            var promise = $http.get(urlToJsonFile);
+            //var urlToJsonFile = './content/json/toys.json';
+            var url = urlDev + '/api/v1/toyList?gender=' + gender + '&age=' + age;
+            //var url = urlDev + '/api/v1';
+            var promise = $http.get(url);
             return promise;
         }
 
-        function getProductDetailbyId(id) {
-            // var url = '';
+        function getProductDetailbyId(productId) {
+            //var url = urlDev + '/api/v1/toy/' + productId;
             var urlToJsonFile = './content/json/toy-1.json';
 
             var promise = $http.get(urlToJsonFile);
             return promise;
         }
+
+        function addProductToCart(productId, quantity) {
+            //var url = urlDev + '/api/v1/cart';
+            var input = {
+                "id": productId,
+                "orderAmount": quantity
+            }
+            var promise = $http.post(url, input);
+            return promise;
+        }
+
 
         function getShoppingCartItem() {
             // var url = '';

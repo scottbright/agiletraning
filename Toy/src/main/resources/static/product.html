@@ -12,8 +12,8 @@
                     <md-list-item>Age: {{toyDetail.age}}</md-list-item>
                     <md-list-item>Price: {{toyDetail.price}}</md-list-item>
                     <md-list-item>Shipping Method: Cash on Delivery</md-list-item>
-                    <md-list-item ng-if="toyDetail.quantity>0" class="in-stock">In Stock</md-list-item>
-                    <md-list-item ng-if="toyDetail.quantity===0" class="out-of-stock">Out of Stock</md-list-item>
+                    <md-list-item ng-if="toyDetail.amountInStock>0" class="in-stock">In Stock</md-list-item>
+                    <md-list-item ng-if="toyDetail.amountInStock===0" class="out-of-stock">Out of Stock</md-list-item>
                     <md-list-item>
                         Quantity&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <md-select ng-model="selectedQuantity">
