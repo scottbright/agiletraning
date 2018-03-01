@@ -29,10 +29,10 @@ angular
         }
 
         function addProductToCart(productId, quantity) {
-            //var url = urlDev + '/api/v1/cart';
+            var url = urlDev + '/api/v1/addToCart';
             var input = {
-                "id": productId,
-                "orderAmount": quantity
+                "toyId": productId,
+                "orderQuantity": quantity
             }
             var promise = $http.post(url, input);
             return promise;

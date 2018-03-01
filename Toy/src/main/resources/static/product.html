@@ -12,13 +12,16 @@
                     <md-list-item id="toy-age">Age: {{toyDetail.age}}</md-list-item>
                     <md-list-item id="toy-price">Price: {{toyDetail.price}}</md-list-item>
                     <md-list-item id="toy-shipping-method">Shipping Method: Cash on Delivery</md-list-item>
-                    <md-list-item id="toy-in-stock" ng-if="toyDetail.quantity>0" class="in-stock">In Stock</md-list-item>
-                    <md-list-item id="toy-out-of-stock" ng-if="toyDetail.quantity===0" class="out-of-stock">Out of Stock</md-list-item>
-                    <md-list-item id="toy-quantity">
-                        Quantity&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <md-list-item id="toy-in-stock" ng-if="toyDetail.amountInStock>0" class="in-stock">In Stock</md-list-item>
+                    <md-list-item id="toy-out-of-stock" ng-if="toyDetail.amountInStock===0" class="out-of-stock">Out of Stock</md-list-item>
+                    <md-list-item id="toy-quantity" ng-if="toyDetail.amountInStock>0">
+                        Quantity:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <md-select id="toy-quantity-select" ng-model="selectedQuantity">
                             <md-option id="toy-{{$index+1}}" ng-repeat="quantity in quantityList" value="{{quantity}}">{{quantity}}</md-option>
                         </md-select>
+                    </md-list-item>
+                    <md-list-item id="toy-quantity-out-of-stock" ng-if="toyDetail.amountInStock==0">
+                        Quantity:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0
                     </md-list-item>
 
                 </md-list>
