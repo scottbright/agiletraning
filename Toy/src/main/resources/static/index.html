@@ -12,11 +12,11 @@
 <body ng-app="myapp" ng-cloak>
     <md-toolbar class="md-hue-2">
         <div class="md-toolbar-tools">
-            <a ng-href="{{window.location}}/#!">
+            <a id="go-home" ng-href="{{window.location}}/#!">
                 <h2 flex md-truncate><b>Toy R not Us</b></h2>
             </a>
             <md-button class="md-icon-button align-right" aria-label="Favorite">
-                <a ng-href="{{window.location}}/#!/cart">
+                <a id="go-cart" ng-href="{{window.location}}/#!/cart">
                     <i class="material-icons">shopping_cart</i>
                 </a>
             </md-button>

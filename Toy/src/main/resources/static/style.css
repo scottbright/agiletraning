@@ -76,5 +76,5 @@ td, th {
   .align-right {
     position: absolute;
     right: 0px;
-    margin-right: 10px;
+    margin-right: 10px !important;
   }
