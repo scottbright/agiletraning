@@ -1,7 +1,7 @@
 angular
     .module("myapp")
     .controller("ProductSearchController", function ($scope,$location, dataservice) {
-    $scope.ages = ['all', '0','1', '2', '3', '4', '5', '6', '7', '8', '9 and more'];
+    $scope.ages = ['all', '0','1', '2', '3', '4', '5', '6', '7', '8', '9+'];
     $scope.selectedAge = 'All';
     
     $scope.genders = ['all', 'male', 'female'];

@@ -14,11 +14,11 @@ angular
                         angular.forEach($scope.shoppingCartItem, function (item, key) {
                             item.quantityList = [];
 
-                            for (var i = 1; i <= item.quantity && i <= 25; i++) {
+                            for (var i = 1; i <= item.amountInStock && i <= 25; i++) {
                                 item.quantityList.push(i);
                             }
                         })
-                        $scope.calculateSubTotal();
+                        $scope.calculateSubTotal($scope.shoppingCartItem);
                         console.log("successs");
 
                     },
@@ -37,12 +37,13 @@ angular
             $location.path('/shipping');
         }
         $scope.delete = function(index){
-            $scope.shoppingCartItem.splice(index,1);
-            $scope.calculateSubTotal();
+            // $scope.shoppingCartItem.splice(index,1);
+            $scope.shoppingCartItem[index].orderQuantity = 0;
+            $scope.calculateSubTotal($scope.shoppingCartItem);
         }
-        $scope.calculateSubTotal = function(){
+        $scope.calculateSubTotal = function(cartItem){
             $scope.subTotal = 0;
-            angular.forEach($scope.shoppingCartItem, function (item, key) {
+            angular.forEach(cartItem, function (item, key) {
                 $scope.subTotal = $scope.subTotal + (item.price * item.orderQuantity);
             })
         }
