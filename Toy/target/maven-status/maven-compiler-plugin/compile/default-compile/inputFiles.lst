@@ -15,4 +15,5 @@
 /Users/blackwidow/Downloads/agiletraning/Toy/src/main/java/com/agile/toy/api/v1/domains/Toy.java
 /Users/blackwidow/Downloads/agiletraning/Toy/src/main/java/com/agile/toy/api/v1/mappers/ToyListItemMapper.java
 /Users/blackwidow/Downloads/agiletraning/Toy/src/main/java/com/agile/toy/api/v1/controllers/CartController.java
+/Users/blackwidow/Downloads/agiletraning/Toy/src/main/java/com/agile/toy/api/v1/models/CartDetailsDTO.java
 /Users/blackwidow/Downloads/agiletraning/Toy/src/main/java/com/agile/toy/api/v1/repositories/ToyListsRepository.java

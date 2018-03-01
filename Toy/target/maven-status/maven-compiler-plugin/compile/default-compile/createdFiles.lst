@@ -4,6 +4,7 @@ com/agile/toy/api/v1/services/ToyService.class
 com/agile/toy/api/v1/controllers/CartController.class
 com/agile/toy/api/v1/domains/CartEntities.class
 com/agile/toy/api/v1/models/ToyListDTO.class
+com/agile/toy/api/v1/models/CartDetailsDTO.class
 com/agile/toy/api/v1/models/ToyDetailsDTO.class
 com/agile/toy/api/v1/mappers/ToyListItemMapperImpl.class
 com/agile/toy/api/v1/mappers/ToyListItemMapper.class
