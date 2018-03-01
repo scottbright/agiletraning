@@ -41,8 +41,10 @@
                 </md-list>
             </md-input-container>
             <md-input-container flex>
-                    <md-list-item>Subtotal ({{shoppingCartItem.length}} item{{shoppingCartItem.length>1?'s':''}}) : {{subTotal | number}} THB </md-list-item>
+                    <md-list flex>
+                        <md-list-item>Subtotal ({{shoppingCartItem.length}} item{{shoppingCartItem.length>1?'s':''}}) : {{subTotal | number}} THB </md-list-item>
                     <md-list-item>Shipping Fee: 50.00 THB</md-list-item>
+                </md-list>
             </md-input-container>
         </div>
         <div layout="row" class="right">
