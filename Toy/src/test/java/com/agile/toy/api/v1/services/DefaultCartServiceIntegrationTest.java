@@ -1,10 +1,10 @@
 package com.agile.toy.api.v1.services;
 
-import com.agile.toy.api.v1.domains.CartEntities;
 import com.agile.toy.api.v1.mappers.ToyListItemMapper;
 import com.agile.toy.api.v1.models.CartEntitiesDTO;
 import com.agile.toy.api.v1.models.ToyInCartDTO;
 import com.agile.toy.api.v1.repositories.CartEntitiesRepository;
+import com.agile.toy.api.v1.repositories.CartEntriesViewRepository;
 import com.agile.toy.api.v1.repositories.ToyListsRepository;
 import com.agile.toy.bootstrap.Bootstrap;
 import org.junit.Before;
@@ -17,11 +17,9 @@ import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.Assert.assertEquals;
-import static org.mockito.Mockito.when;
 
 @RunWith(SpringRunner.class)
 @DataJpaTest
@@ -39,11 +37,14 @@ public class DefaultCartServiceIntegrationTest {
     @Autowired
     private ToyListsRepository toyListsRepository;
 
+    @Autowired
+    private CartEntriesViewRepository cartEntriesViewRepository;
+
     @Before
     public void setUp() throws Exception {
-        bootstrap = new Bootstrap(toyListsRepository,cartEntitiesRepository);
+        bootstrap = new Bootstrap(toyListsRepository,cartEntitiesRepository,cartEntriesViewRepository);
         bootstrap.run();
-        cartService = new DefaultCartService(cartEntitiesRepository, ToyListItemMapper.INSTANCE);
+        cartService = new DefaultCartService(cartEntitiesRepository, cartEntriesViewRepository, ToyListItemMapper.INSTANCE);
 
     }
 
@@ -64,7 +65,6 @@ public class DefaultCartServiceIntegrationTest {
     }
 
     @Test
-    @Ignore
     public void getCartInfoTest(){
         Long cartId = 1L;
 

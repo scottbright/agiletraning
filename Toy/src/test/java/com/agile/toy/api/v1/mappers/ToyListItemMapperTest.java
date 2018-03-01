@@ -2,8 +2,10 @@ package com.agile.toy.api.v1.mappers;
 
 import com.agile.toy.api.v1.domains.CartEntities;
 import com.agile.toy.api.v1.domains.Toy;
+import com.agile.toy.api.v1.domains.ToyInCart;
 import com.agile.toy.api.v1.models.CartEntitiesDTO;
 import com.agile.toy.api.v1.models.ToyDetailsDTO;
+import com.agile.toy.api.v1.models.ToyInCartDTO;
 import com.agile.toy.api.v1.models.ToyListItemDTO;
 import org.junit.Before;
 import org.junit.Test;
@@ -68,6 +70,15 @@ public class ToyListItemMapperTest {
         assertEquals(cartEntities.getCartId(), cartEntitiesDTO.getCartId());
         assertEquals(cartEntities.getOrderQuantity(), cartEntitiesDTO.getOrderQuantity());
         assertEquals(cartEntities.getToyId(), cartEntitiesDTO.getToyId());
+    }
+
+    @Test
+    public void ToyIncartToDtoTest(){
+        ToyInCart toyInCart = new ToyInCart();
+        toyInCart.setGender("male");
+        ToyInCartDTO toyInCartDTO = toyListItemMapper.convertToyCartDomainToDto(toyInCart);
+        assertEquals(toyInCart.getGender(),toyInCartDTO.getGender());
+
     }
 
 

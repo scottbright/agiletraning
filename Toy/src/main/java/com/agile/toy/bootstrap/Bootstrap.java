@@ -3,7 +3,9 @@ package com.agile.toy.bootstrap;
 
 import com.agile.toy.api.v1.domains.CartEntities;
 import com.agile.toy.api.v1.domains.Toy;
+import com.agile.toy.api.v1.domains.ToyInCart;
 import com.agile.toy.api.v1.repositories.CartEntitiesRepository;
+import com.agile.toy.api.v1.repositories.CartEntriesViewRepository;
 import com.agile.toy.api.v1.repositories.ToyListsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -19,14 +21,16 @@ public class Bootstrap implements CommandLineRunner{
 
     private ToyListsRepository toyListsRepository;
     private CartEntitiesRepository cartEntitiesRepository;
+    private CartEntriesViewRepository cartEntriesViewRepository;
 
 
-     public Bootstrap(ToyListsRepository toyListsRepository, CartEntitiesRepository cartEntitiesRepository) {
-      this.toyListsRepository = toyListsRepository;
-      this.cartEntitiesRepository = cartEntitiesRepository;
-     }
+    public Bootstrap(ToyListsRepository toyListsRepository, CartEntitiesRepository cartEntitiesRepository, CartEntriesViewRepository cartEntriesViewRepository) {
+        this.toyListsRepository = toyListsRepository;
+        this.cartEntitiesRepository = cartEntitiesRepository;
+        this.cartEntriesViewRepository = cartEntriesViewRepository;
+    }
 
-     @Override
+    @Override
     public void run(String... args) throws Exception {
 
         Toy toy1 = new Toy();
@@ -87,6 +91,19 @@ public class Bootstrap implements CommandLineRunner{
 
        cartEntitiesRepository.save(cartEntities1);
        cartEntitiesRepository.save(cartEntities2);
+
+         ToyInCart toyInCart = new ToyInCart();
+         toyInCart.setToyName("chan");
+         toyInCart.setCartId(1L);
+
+         ToyInCart toyInCart2 = new ToyInCart();
+         toyInCart2.setToyName("suttichujit");
+         toyInCart2.setCartId(1L);
+
+         cartEntriesViewRepository.save(toyInCart);
+         cartEntriesViewRepository.save(toyInCart2);
+
+
 
     }
 }

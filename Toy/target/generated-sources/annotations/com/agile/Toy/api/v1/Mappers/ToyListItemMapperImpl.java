@@ -2,15 +2,17 @@ package com.agile.toy.api.v1.mappers;
 
 import com.agile.toy.api.v1.domains.CartEntities;
 import com.agile.toy.api.v1.domains.Toy;
+import com.agile.toy.api.v1.domains.ToyInCart;
 import com.agile.toy.api.v1.models.CartEntitiesDTO;
 import com.agile.toy.api.v1.models.ToyDetailsDTO;
+import com.agile.toy.api.v1.models.ToyInCartDTO;
 import com.agile.toy.api.v1.models.ToyListItemDTO;
 import javax.annotation.Generated;
 import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2018-03-01T13:22:16+0700",
+    date = "2018-03-01T13:49:56+0700",
     comments = "version: 1.2.0.CR2, compiler: javac, environment: Java 1.8.0_161 (Oracle Corporation)"
 )
 @Component
@@ -82,5 +84,26 @@ public class ToyListItemMapperImpl implements ToyListItemMapper {
         cartEntities.setOrderQuantity( cartEntitiesDTO.getOrderQuantity() );
 
         return cartEntities;
+    }
+
+    @Override
+    public ToyInCartDTO convertToyCartDomainToDto(ToyInCart toyInCart) {
+        if ( toyInCart == null ) {
+            return null;
+        }
+
+        ToyInCartDTO toyInCartDTO = new ToyInCartDTO();
+
+        toyInCartDTO.setToyName( toyInCart.getToyName() );
+        toyInCartDTO.setOrderQuantity( toyInCart.getOrderQuantity() );
+        toyInCartDTO.setPrice( toyInCart.getPrice() );
+        toyInCartDTO.setBrand( toyInCart.getBrand() );
+        toyInCartDTO.setGender( toyInCart.getGender() );
+        toyInCartDTO.setAge( toyInCart.getAge() );
+        toyInCartDTO.setAmountInStock( toyInCart.getAmountInStock() );
+        toyInCartDTO.setId( toyInCart.getId() );
+        toyInCartDTO.setToyId( toyInCart.getToyId() );
+
+        return toyInCartDTO;
     }
 }
