@@ -21,18 +21,18 @@ angular
         }
 
         function getProductDetailbyId(productId) {
-            //var url = urlDev + '/api/v1/toy/' + productId;
-            var urlToJsonFile = './content/json/toy-1.json';
+            var url = urlDev + '/api/v1/toy/' + productId;
+            // var urlToJsonFile = './content/json/toy-1.json';
 
-            var promise = $http.get(urlToJsonFile);
+            var promise = $http.get(url);
             return promise;
         }
 
         function addProductToCart(productId, quantity) {
-            //var url = urlDev + '/api/v1/cart';
+            var url = urlDev + '/api/v1/addToCart';
             var input = {
-                "id": productId,
-                "orderAmount": quantity
+                "toyId": productId,
+                "orderQuantity": quantity
             }
             var promise = $http.post(url, input);
             return promise;

@@ -12,7 +12,7 @@ angular
                 .then(
                     function (response) {
                         $scope.toyDetail = response.data;
-                        for(var i=1;i<$scope.toyDetail.quantity && i<=25;i++){
+                        for(var i=1;i<=$scope.toyDetail.amountInStock && i<=25;i++){
                             $scope.quantityList.push(i);
                         }
                     },
@@ -26,7 +26,7 @@ angular
         $scope.addToCart = function () {
             
             //call API to push product to cart
-            dataservice.addProductToCart($scope.productID, scope.selectedQuantity)
+            dataservice.addProductToCart($scope.productID, $scope.selectedQuantity)
                 .then(
                     function (response) {
                         console.log(response);
