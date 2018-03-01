@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/api/v1")
 public class ToyController {
 
-
     private ToyService toyService;
 
     @Autowired

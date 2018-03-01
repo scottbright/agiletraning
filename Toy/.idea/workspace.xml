@@ -2,21 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e6680839-ceb1-4f5d-afdc-9cc7b5d931da" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/agile/toy/api/v1/domains/ToyInCart.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/agile/toy/api/v1/repositories/CartEntriesViewRepository.java" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/agile/toy/api/v1/controllers/CartController.java" afterPath="$PROJECT_DIR$/src/main/java/com/agile/toy/api/v1/controllers/CartController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/agile/toy/api/v1/mappers/ToyListItemMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/agile/toy/api/v1/mappers/ToyListItemMapper.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/agile/toy/api/v1/models/ToyInCartDTO.java" afterPath="$PROJECT_DIR$/src/main/java/com/agile/toy/api/v1/models/ToyInCartDTO.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/agile/toy/api/v1/services/DefaultCartService.java" afterPath="$PROJECT_DIR$/src/main/java/com/agile/toy/api/v1/services/DefaultCartService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/agile/toy/bootstrap/Bootstrap.java" afterPath="$PROJECT_DIR$/src/main/java/com/agile/toy/bootstrap/Bootstrap.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/agile/toy/api/v1/controllers/CartControllerIntegrationTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/agile/toy/api/v1/controllers/CartControllerIntegrationTest.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/agile/toy/api/v1/controllers/CartControllerTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/agile/toy/api/v1/controllers/CartControllerTest.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/agile/toy/api/v1/mappers/ToyListItemMapperTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/agile/toy/api/v1/mappers/ToyListItemMapperTest.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/agile/toy/api/v1/services/DefaultCartServiceIntegrationTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/agile/toy/api/v1/services/DefaultCartServiceIntegrationTest.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/agile/toy/api/v1/services/DefaultCartServiceTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/agile/toy/api/v1/services/DefaultCartServiceTest.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/agile/toy/api/v1/services/DefaultToyServiceIntegrationTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/agile/toy/api/v1/services/DefaultToyServiceIntegrationTest.java" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/com/agile/Toy/api/v1/Mappers/ToyListItemMapperImpl.java" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/agile/Toy/api/v1/Mappers/ToyListItemMapperImpl.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/agile/toy/api/v1/controllers/ToyController.java" afterPath="$PROJECT_DIR$/src/main/java/com/agile/toy/api/v1/controllers/ToyController.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,16 +17,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="DefaultToyServiceIntegrationTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/agile/toy/api/v1/services/DefaultToyServiceIntegrationTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="43" column="101" lean-forward="false" selection-start-line="43" selection-start-column="101" selection-end-line="43" selection-end-column="101" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="DefaultCartServiceIntegrationTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/agile/toy/api/v1/services/DefaultCartServiceIntegrationTest.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -83,40 +59,27 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CartController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/agile/toy/api/v1/controllers/CartController.java">
+      <file leaf-file-name="CartEntities.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/agile/toy/api/v1/domains/CartEntities.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="35" column="13" lean-forward="false" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
-              <folding>
-                <element signature="e#1077#1078#0" expanded="true" />
-                <element signature="e#1130#1131#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ToyListItemMapperTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/agile/toy/api/v1/mappers/ToyListItemMapperTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="411">
-              <caret line="74" column="4" lean-forward="false" selection-start-line="74" selection-start-column="4" selection-end-line="81" selection-end-column="5" />
+            <state relative-caret-position="75">
+              <caret line="8" column="27" lean-forward="false" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ToyListItemMapper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/agile/toy/api/v1/mappers/ToyListItemMapper.java">
+      <file leaf-file-name="Toy.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/agile/toy/api/v1/domains/Toy.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+            <state relative-caret-position="60">
+              <caret line="7" column="8" lean-forward="false" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="26" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ToyInCart.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ToyInCart.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/agile/toy/api/v1/domains/ToyInCart.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="480">
@@ -140,11 +103,34 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CartControllerIntegrationTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CartController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/agile/toy/api/v1/controllers/CartController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="35" column="13" lean-forward="false" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
+              <folding>
+                <element signature="e#1077#1078#0" expanded="true" />
+                <element signature="e#1130#1131#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CartControllerIntegrationTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/agile/toy/api/v1/controllers/CartControllerIntegrationTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="73">
-              <caret line="32" column="21" lean-forward="false" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
+            <state relative-caret-position="330">
+              <caret line="46" column="42" lean-forward="false" selection-start-line="46" selection-start-column="42" selection-end-line="46" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ToyController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/agile/toy/api/v1/controllers/ToyController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -219,7 +205,6 @@
         <option value="$PROJECT_DIR$/src/test/java/com/agile/toy/api/v1/controllers/ToyControllerTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/agile/toy/utilities/JsonCoverter.java" />
         <option value="$PROJECT_DIR$/hibernate.cfg" />
-        <option value="$PROJECT_DIR$/src/main/java/com/agile/toy/api/v1/controllers/ToyController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/agile/toy/api/v1/domains/CartEntities.java" />
         <option value="$PROJECT_DIR$/src/main/resources/static/dataservice.service.js" />
         <option value="$PROJECT_DIR$/src/main/java/com/agile/toy/api/v1/models/CartEntitiesDTO.java" />
@@ -246,6 +231,7 @@
         <option value="$PROJECT_DIR$/src/test/java/com/agile/toy/api/v1/controllers/CartControllerTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/agile/toy/bootstrap/Bootstrap.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/agile/toy/api/v1/controllers/CartControllerIntegrationTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/agile/toy/api/v1/controllers/ToyController.java" />
       </list>
     </option>
   </component>
@@ -528,7 +514,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ToyAppApplication">
+  <component name="RunManager" selected="JUnit.All in Toy">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -568,6 +554,26 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="" />
       <envs />
+    </configuration>
+    <configuration name="All in Toy" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="Toy" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="package" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
     </configuration>
     <configuration name="CartControllerIntegrationTest.getCartTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
@@ -644,31 +650,6 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="DefaultCartServiceTest.getCartInfoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.agile.toy.api.v1.services.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="Toy" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.agile.toy.api.v1.services" />
-      <option name="MAIN_CLASS_NAME" value="com.agile.toy.api.v1.services.DefaultCartServiceTest" />
-      <option name="METHOD_NAME" value="getCartInfoTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -730,19 +711,19 @@
       <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.DefaultCartServiceTest.getCartInfoTest" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.DefaultCartServiceIntegrationTest.getCartInfoTest" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.CartControllerTest.getCartTest" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.CartControllerIntegrationTest.getCartTest" />
-      <item index="4" class="java.lang.String" itemvalue="Application.ToyAppApplication" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.DefaultCartServiceIntegrationTest.getCartInfoTest" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.CartControllerTest.getCartTest" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.CartControllerIntegrationTest.getCartTest" />
+      <item index="3" class="java.lang.String" itemvalue="Application.ToyAppApplication" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.All in Toy" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.ToyAppApplication" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.CartControllerIntegrationTest.getCartTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.CartControllerTest.getCartTest" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.DefaultCartServiceIntegrationTest.getCartInfoTest" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.DefaultCartServiceTest.getCartInfoTest" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.All in Toy" />
+        <item index="1" class="java.lang.String" itemvalue="Application.ToyAppApplication" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.CartControllerIntegrationTest.getCartTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.CartControllerTest.getCartTest" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.DefaultCartServiceIntegrationTest.getCartInfoTest" />
       </list>
     </recent_temporary>
   </component>
@@ -763,6 +744,9 @@
     <servers />
   </component>
   <component name="TestHistory">
+    <history-entry file="All_in_Toy - 2018.03.01 at 14h 22m 53s.xml">
+      <configuration name="All in Toy" configurationId="JUnit" />
+    </history-entry>
     <history-entry file="CartControllerIntegrationTest_getCartTest - 2018.03.01 at 14h 14m 01s.xml">
       <configuration name="CartControllerIntegrationTest.getCartTest" configurationId="JUnit" />
     </history-entry>
@@ -780,9 +764,6 @@
     </history-entry>
     <history-entry file="CartControllerTest_getCartTest - 2018.03.01 at 14h 11m 55s.xml">
       <configuration name="CartControllerTest.getCartTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DefaultCartServiceIntegrationTest_getCartInfoTest - 2018.03.01 at 13h 57m 31s.xml">
-      <configuration name="DefaultCartServiceIntegrationTest.getCartInfoTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="DefaultCartServiceIntegrationTest_getCartInfoTest - 2018.03.01 at 14h 00m 19s.xml">
       <configuration name="DefaultCartServiceIntegrationTest.getCartInfoTest" configurationId="JUnit" />
@@ -805,6 +786,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -819,7 +801,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286991" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2603834" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2603834" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973376" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1045,14 +1027,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/agile/toy/api/v1/controllers/ToyController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="22" column="15" lean-forward="false" selection-start-line="22" selection-start-column="15" selection-end-line="22" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/agile/toy/api/v1/repositories/CartEntitiesRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -1077,26 +1051,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/agile/toy/api/v1/domains/CartEntities.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="8" column="27" lean-forward="false" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/agile/toy/api/v1/models/ToyDetailsDTO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="9" column="23" lean-forward="false" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/agile/toy/api/v1/domains/Toy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="7" column="8" lean-forward="false" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="26" />
           <folding />
         </state>
       </provider>
@@ -1192,28 +1150,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/agile/toy/api/v1/domains/ToyInCart.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="38" column="19" lean-forward="true" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1672#1673#0" expanded="true" />
-            <element signature="e#1697#1698#0" expanded="true" />
-            <element signature="e#1731#1732#0" expanded="true" />
-            <element signature="e#1759#1760#0" expanded="true" />
-            <element signature="e#1790#1791#0" expanded="true" />
-            <element signature="e#1819#1820#0" expanded="true" />
-            <element signature="e#1861#1862#0" expanded="true" />
-            <element signature="e#1897#1898#0" expanded="true" />
-            <element signature="e#1927#1928#0" expanded="true" />
-            <element signature="e#1955#1956#0" expanded="true" />
-            <element signature="e#1995#1996#0" expanded="true" />
-            <element signature="e#2029#2030#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/agile/toy/api/v1/mappers/ToyListItemMapperTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="411">
@@ -1256,6 +1192,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/agile/toy/api/v1/controllers/ToyControllerIntegrationTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="23" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/agile/toy/api/v1/controllers/CartControllerIntegrationTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="46" column="42" lean-forward="false" selection-start-line="46" selection-start-column="42" selection-end-line="46" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/agile/toy/api/v1/controllers/ToyController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/agile/toy/api/v1/controllers/CartController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
@@ -1267,19 +1227,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/agile/toy/api/v1/controllers/ToyControllerIntegrationTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/agile/toy/api/v1/domains/CartEntities.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="23" selection-end-column="23" />
+        <state relative-caret-position="75">
+          <caret line="8" column="27" lean-forward="false" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/agile/toy/api/v1/controllers/CartControllerIntegrationTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/agile/toy/api/v1/domains/Toy.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="73">
-          <caret line="32" column="21" lean-forward="false" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
+        <state relative-caret-position="60">
+          <caret line="7" column="8" lean-forward="false" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="26" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/agile/toy/api/v1/domains/ToyInCart.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="38" column="19" lean-forward="true" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1672#1673#0" expanded="true" />
+            <element signature="e#1697#1698#0" expanded="true" />
+            <element signature="e#1731#1732#0" expanded="true" />
+            <element signature="e#1759#1760#0" expanded="true" />
+            <element signature="e#1790#1791#0" expanded="true" />
+            <element signature="e#1819#1820#0" expanded="true" />
+            <element signature="e#1861#1862#0" expanded="true" />
+            <element signature="e#1897#1898#0" expanded="true" />
+            <element signature="e#1927#1928#0" expanded="true" />
+            <element signature="e#1955#1956#0" expanded="true" />
+            <element signature="e#1995#1996#0" expanded="true" />
+            <element signature="e#2029#2030#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

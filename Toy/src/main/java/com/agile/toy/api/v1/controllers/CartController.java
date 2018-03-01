@@ -13,7 +13,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/v1")
-@CrossOrigin(origins = "*")
+
 public class CartController {
 
     private CartService cartService;
@@ -24,6 +24,7 @@ public class CartController {
         this.cartService = cartService;
     }
 
+    @CrossOrigin(origins = "*")
     @PostMapping("/addToCart")
     @ResponseStatus(HttpStatus.OK)
     public CartEntitiesDTO addToCart(@RequestBody CartEntitiesDTO cartEntitiesDTO){
@@ -31,6 +32,7 @@ public class CartController {
         return cartService.addToCart(cartEntitiesDTO);
     }
 
+    @CrossOrigin(origins = "*")
     @GetMapping("/cart/{id}")
     @ResponseStatus(HttpStatus.OK)
     public List<ToyInCartDTO> getToyIncart(@PathVariable Long id){
