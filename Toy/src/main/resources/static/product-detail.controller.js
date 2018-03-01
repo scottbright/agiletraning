@@ -22,7 +22,12 @@ angular
                 );
         }
         $scope.getProductDetail();
-
+        $scope.changeSelectedQuantity = function(quantity){
+            $scope.selectedQuantity = quantity;
+        }
+        $scope.console = function(){
+            console.log($scope.selectedQuantity);
+        }
         $scope.addToCart = function () {
             
             //call API to push product to cart

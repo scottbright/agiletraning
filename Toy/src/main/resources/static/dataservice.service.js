@@ -54,7 +54,7 @@ angular
             return promise;
         }
 
-        function getOrderDetail(userId) {
+        function getOrderDetail() {
             // var url = '';
             var urlToJsonFile = './content/json/orderdetail.json';
             var promise = $http.get(urlToJsonFile);

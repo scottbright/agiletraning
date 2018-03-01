@@ -7,7 +7,7 @@ angular
         //mock user ID
         var userId = 'chan'; 
 
-        $scope.getOrderDetail = function (userId) {
+        $scope.getOrderDetail = function () {
             $scope.dataservice.getOrderDetail(userId)
                 .then(
                     function (response) {
