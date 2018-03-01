@@ -2,6 +2,7 @@ package com.agile.toy.api.v1.services;
 
 import com.agile.toy.api.v1.domains.CartEntities;
 import com.agile.toy.api.v1.mappers.ToyListItemMapper;
+import com.agile.toy.api.v1.models.CartDetailsDTO;
 import com.agile.toy.api.v1.models.CartEntitiesDTO;
 import com.agile.toy.api.v1.repositories.CartEntitiesRepository;
 import org.junit.Before;
@@ -48,6 +49,13 @@ public class DefaultCartServiceTest {
         assertEquals(cartEntitiesDTO.getCartId(), result.getCartId());
         assertEquals(cartEntitiesDTO.getOrderQuantity(),result.getOrderQuantity());
         assertEquals(cartEntities.getToyId(),result.getToyId());
+
+
+    }
+
+    @Test
+    public void getCartInfoTest(){
+        CartDetailsDTO cartDetailsDTO = new CartDetailsDTO();
 
 
     }

@@ -8,9 +8,8 @@ angular
             getProvince: getProvince,
             getOrderDetail: getOrderDetail
         };
-        var urlDev = 'https://crossorigin.me/http://128.199.190.215:8080';
-        var urlProd = 'https://crossorigin.me/http://188.166.211.237:8080';
-
+        var urlDev = 'http://128.199.190.215:8080';
+        var urlProd = 'ghttp://188.166.211.237:8080';
         return dataservice;
 
         function searchProduct(age, gender) {
