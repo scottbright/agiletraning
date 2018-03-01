@@ -78,6 +78,7 @@ public class DefaultToyServiceIntegrationTest {
         assertEquals(1,toyListItemDTOs.size());
         assertEquals("9",toyListItemDTOs.get(0).getAge());
     }
+
     @Test
     public void getToyListItemByAllGenderAge(){
         String gender = "All";
@@ -88,6 +89,7 @@ public class DefaultToyServiceIntegrationTest {
         assertEquals(5,toyListItemDTOs.size());
 
     }
+
     @Test
     public void getToyListItemByAllGenderAgeLowercase(){
         String gender = "alL";
@@ -98,6 +100,7 @@ public class DefaultToyServiceIntegrationTest {
         assertEquals(5,toyListItemDTOs.size());
 
     }
+
     @Test
     public void getToyDetailsByIdIntegrationTest(){
         Long id = 1L;

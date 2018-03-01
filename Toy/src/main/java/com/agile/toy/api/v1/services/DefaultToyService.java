@@ -62,8 +62,8 @@ public class DefaultToyService implements ToyService{
                 return "3";
             if (isSixToEight(ageInt))
                 return "6";
-            return "9";
         }
+        return "9";
     }
 
     private boolean isAll(String age) {
