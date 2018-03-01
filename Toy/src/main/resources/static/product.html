@@ -3,7 +3,7 @@
         <h1 class="md-title">{{toyDetail.toyName}}</h1>
         <div layout="row">
             <md-input-container style="margin-right: 10px;" flex>
-                <img src="/product/{{toyDetail.productID}}.jpeg" alt="Lego" height="400" width="400">
+                <img ng-src="/product/{{productID}}.jpeg" alt="image" height="400" width="400">
             </md-input-container>
             <md-input-container flex>
                 <md-list flex>
@@ -24,10 +24,10 @@
                 </md-list>
                 <div layout="row">
                     <md-input-container class="padding-right-25" flex="75">
-                        <md-button md-no-ink class="md-raised md-primary toy-button" ng-click="addToCart()">Add to cart</md-button>
+                        <md-button md-no-ink class="md-raised md-primary toy-button" name="add-button" ng-click="addToCart()">Add to cart</md-button>
                     </md-input-container>
                     <md-input-container class="padding-right-25" flex="25">
-                        <md-button class="md-raised toy-button" ng-click="back()">Back</md-button>
+                        <md-button class="md-raised toy-button" name="back-button"  ng-click="back()">Back</md-button>
                     </md-input-container>
                 </div>
             </md-input-container>
