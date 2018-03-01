@@ -6,7 +6,8 @@ angular
             getProductDetailbyId: getProductDetailbyId,
             getShoppingCartItem: getShoppingCartItem,
             getProvince: getProvince,
-            getOrderDetail: getOrderDetail
+            getOrderDetail: getOrderDetail,
+            addProductToCart:addProductToCart
         };
         var urlDev = 'http://128.199.190.215:8080';
         var urlProd = 'http://188.166.211.237:8080';

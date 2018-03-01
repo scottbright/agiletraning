@@ -26,7 +26,7 @@ angular
         $scope.addToCart = function () {
             
             //call API to push product to cart
-            dataservice.addProductToCart($scope.productID, $scope.selectedQuantity)
+            dataservice.addProductToCart(+$scope.productID, $scope.selectedQuantity)
                 .then(
                     function (response) {
                         console.log(response);
