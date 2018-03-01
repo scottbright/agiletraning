@@ -22,6 +22,7 @@ public class DefaultCartService implements CartService{
 
     @Override
     public CartEntitiesDTO addToCart(CartEntitiesDTO cartEntitiesDTO) {
+        cartEntitiesDTO.setCartId(1L); //assigned mock cartId
         CartEntities cartEntities = cartEntitiesRepository.save(toyListItemMapper.convertCartDtoToCartDomain(cartEntitiesDTO));
         return toyListItemMapper.convertCartDomainToCartDto(cartEntities);
     }
