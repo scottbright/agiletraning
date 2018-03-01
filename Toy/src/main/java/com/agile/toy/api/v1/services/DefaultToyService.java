@@ -52,6 +52,8 @@ public class DefaultToyService implements ToyService{
         if (isAll(age)) {
             return "%";
         }
+        if(age.equals("9+"))
+            return "9";
         else {
             Integer ageInt = Integer.parseInt(age);
             if (isBaby(ageInt))
@@ -63,7 +65,8 @@ public class DefaultToyService implements ToyService{
             if (isSixToEight(ageInt))
                 return "6";
         }
-        return "9";
+        return "0";
+
     }
 
     private boolean isAll(String age) {
