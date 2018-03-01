@@ -5,6 +5,7 @@ import com.agile.toy.api.v1.mappers.ToyListItemMapper;
 import com.agile.toy.api.v1.models.CartEntitiesDTO;
 import com.agile.toy.api.v1.models.ToyInCartDTO;
 import com.agile.toy.api.v1.services.CartService;
+import com.agile.toy.api.v1.services.CheckOutService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -16,11 +17,13 @@ import java.util.List;
 public class CartController {
 
     private CartService cartService;
+    private CheckOutService checkOutService;
 
     @Autowired
-    public CartController(CartService cartService) {
+    public CartController(CartService cartService,CheckOutService checkOutService) {
 
         this.cartService = cartService;
+        this.checkOutService = checkOutService;
     }
 
     @CrossOrigin(origins = "*")
@@ -38,5 +41,15 @@ public class CartController {
         return cartService.getCartDetails(id);
     }
 
+    @CrossOrigin(origins = "*")
+    @GetMapping("/checkout")
+    @ResponseStatus(HttpStatus.OK)
+    public List<ToyInCartDTO> checkOut(){
+        List<ToyInCartDTO> toyInCarts = cartService.getCartDetails(1L);
+        checkOutService.clearCart();
+
+        return toyInCarts;
+
+    }
 
 }

@@ -5,6 +5,7 @@ import com.agile.toy.api.v1.domains.ToyInCart;
 import com.agile.toy.api.v1.models.CartEntitiesDTO;
 import com.agile.toy.api.v1.models.ToyInCartDTO;
 import com.agile.toy.api.v1.services.CartService;
+import com.agile.toy.api.v1.services.CheckOutService;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.Test;
@@ -34,6 +35,10 @@ public class CartControllerTest {
 
     @MockBean
     private CartService cartService;
+
+    @MockBean
+    private CheckOutService checkOutService;
+
 
     @Autowired
     private MockMvc mockMvc;
@@ -74,6 +79,14 @@ public class CartControllerTest {
                 .andExpect(jsonPath("$[0].toyName",equalTo(toyInCartDTO.getToyName())));
 
 
+    }
+    @Test
+    public void checkout() throws Exception {
+        Long cardId = 1L;
+
+        mockMvc.perform(get("/api/v1/checkout")
+                .contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk());
     }
 
 

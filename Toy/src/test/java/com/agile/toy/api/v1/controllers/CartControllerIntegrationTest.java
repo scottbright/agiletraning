@@ -62,4 +62,12 @@ public class CartControllerIntegrationTest {
 
 
     }
+    @Test
+    public void checkout() throws Exception {
+        Long cardId = 1L;
+
+        mockMvc.perform(get("/api/v1/checkout")
+                .contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk());
+    }
 }
