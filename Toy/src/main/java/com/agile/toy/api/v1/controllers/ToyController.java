@@ -26,12 +26,14 @@ public class ToyController {
         return "hello world";
     }
 
+    @CrossOrigin(origins = "128.199.190.215:8080")
     @GetMapping("/toyList")
     @ResponseStatus(HttpStatus.OK)
     public ToyListDTO getToyListByGenderAndAge(@RequestParam String gender, @RequestParam String age){
         return new ToyListDTO(toyService.getToyFromGenderAndAge(gender,age));
     }
 
+    @CrossOrigin(origins = "128.199.190.215:8080")
     @GetMapping("/toy/{id}")
     @ResponseStatus(HttpStatus.OK)
     public ToyDetailsDTO getToyDetailsById(@PathVariable Long id){
