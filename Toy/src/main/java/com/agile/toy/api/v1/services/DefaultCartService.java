@@ -4,9 +4,13 @@ package com.agile.toy.api.v1.services;
 import com.agile.toy.api.v1.domains.CartEntities;
 import com.agile.toy.api.v1.mappers.ToyListItemMapper;
 import com.agile.toy.api.v1.models.CartEntitiesDTO;
+import com.agile.toy.api.v1.models.ToyInCartDTO;
 import com.agile.toy.api.v1.repositories.CartEntitiesRepository;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class DefaultCartService implements CartService{
@@ -25,5 +29,11 @@ public class DefaultCartService implements CartService{
         cartEntitiesDTO.setCartId(1L); //assigned mock cartId
         CartEntities cartEntities = cartEntitiesRepository.save(toyListItemMapper.convertCartDtoToCartDomain(cartEntitiesDTO));
         return toyListItemMapper.convertCartDomainToCartDto(cartEntities);
+    }
+
+    @Override
+    public List<ToyInCartDTO> getCartDetails(Long cartId) {
+
+        return null;
     }
 }

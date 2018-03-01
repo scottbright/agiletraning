@@ -1,7 +1,9 @@
 package com.agile.toy.bootstrap;
 
 
+import com.agile.toy.api.v1.domains.CartEntities;
 import com.agile.toy.api.v1.domains.Toy;
+import com.agile.toy.api.v1.repositories.CartEntitiesRepository;
 import com.agile.toy.api.v1.repositories.ToyListsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -14,15 +16,18 @@ import java.util.List;
 @Component
 @Profile("Test")
 public class Bootstrap implements CommandLineRunner{
-    private ToyListsRepository toyListsRepository;
 
-    @Autowired
-    public Bootstrap(ToyListsRepository toyListsRepository){
-        this.toyListsRepository = toyListsRepository;
-    }
-    @Override
+    private ToyListsRepository toyListsRepository;
+    private CartEntitiesRepository cartEntitiesRepository;
+
+
+     public Bootstrap(ToyListsRepository toyListsRepository, CartEntitiesRepository cartEntitiesRepository) {
+      this.toyListsRepository = toyListsRepository;
+      this.cartEntitiesRepository = cartEntitiesRepository;
+     }
+
+     @Override
     public void run(String... args) throws Exception {
-       List<Toy> toyList = new ArrayList<>();
 
         Toy toy1 = new Toy();
         toy1.setToyName("43 Piece dinner set");
@@ -69,7 +74,19 @@ public class Bootstrap implements CommandLineRunner{
         toyListsRepository.save(toy3);
         toyListsRepository.save(toy4);
         toyListsRepository.save(toy5);
-        System.out.println("changg");
+
+        CartEntities cartEntities1 = new CartEntities();
+        cartEntities1.setCartId(1L);
+        cartEntities1.setOrderQuantity(10);
+        cartEntities1.setToyId(1L);
+
+       CartEntities cartEntities2 = new CartEntities();
+       cartEntities2.setCartId(1L);
+       cartEntities2.setOrderQuantity(10);
+       cartEntities2.setToyId(1L);
+
+       cartEntitiesRepository.save(cartEntities1);
+       cartEntitiesRepository.save(cartEntities2);
 
     }
 }

@@ -1,5 +1,6 @@
 package com.agile.toy.api.v1.services;
 
+import com.agile.toy.api.v1.repositories.CartEntitiesRepository;
 import com.agile.toy.bootstrap.Bootstrap;
 import com.agile.toy.api.v1.mappers.ToyListItemMapper;
 import com.agile.toy.api.v1.models.ToyDetailsDTO;
@@ -30,9 +31,12 @@ public class DefaultToyServiceIntegrationTest {
     @Autowired
     ToyListsRepository toyListsRepository;
 
+    @Autowired
+    CartEntitiesRepository cartEntitiesRepository;
+
     @Before
     public void setup() throws Exception {
-        bootstrap = new Bootstrap(toyListsRepository);
+        bootstrap = new Bootstrap(toyListsRepository,cartEntitiesRepository);
         bootstrap.run();
 
         toyService = new DefaultToyService(toyListsRepository, ToyListItemMapper.INSTANCE);
