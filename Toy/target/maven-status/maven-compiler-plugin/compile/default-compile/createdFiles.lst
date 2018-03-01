@@ -1,6 +1,7 @@
 com/agile/toy/ToyAppApplication.class
 com/agile/toy/api/v1/repositories/ToyListsRepository.class
 com/agile/toy/api/v1/services/ToyService.class
+com/agile/toy/api/v1/controllers/CartController.class
 com/agile/toy/api/v1/domains/CartEntities.class
 com/agile/toy/api/v1/models/ToyListDTO.class
 com/agile/toy/api/v1/models/ToyDetailsDTO.class

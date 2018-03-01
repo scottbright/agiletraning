@@ -2,7 +2,7 @@ package com.agile.toy.api.v1.models;
 
 public class CartEntitiesDTO {
 
-    private Long id;
+
     private Long cartId;
     private Long toyId;
     private Integer orderQuantity;
@@ -31,11 +31,4 @@ public class CartEntitiesDTO {
         this.orderQuantity = orderQuantity;
     }
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
 }

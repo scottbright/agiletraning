@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2018-03-01T09:54:42+0700",
+    date = "2018-03-01T10:25:16+0700",
     comments = "version: 1.2.0.CR2, compiler: javac, environment: Java 1.8.0_161 (Oracle Corporation)"
 )
 @Component
@@ -65,7 +65,6 @@ public class ToyListItemMapperImpl implements ToyListItemMapper {
         cartEntitiesDTO.setCartId( cart.getCartId() );
         cartEntitiesDTO.setToyId( cart.getToyId() );
         cartEntitiesDTO.setOrderQuantity( cart.getOrderQuantity() );
-        cartEntitiesDTO.setId( cart.getId() );
 
         return cartEntitiesDTO;
     }
@@ -78,7 +77,6 @@ public class ToyListItemMapperImpl implements ToyListItemMapper {
 
         CartEntities cartEntities = new CartEntities();
 
-        cartEntities.setId( cartEntitiesDTO.getId() );
         cartEntities.setCartId( cartEntitiesDTO.getCartId() );
         cartEntities.setToyId( cartEntitiesDTO.getToyId() );
         cartEntities.setOrderQuantity( cartEntitiesDTO.getOrderQuantity() );
