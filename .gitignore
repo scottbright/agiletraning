@@ -1,2 +1,5 @@
 .DS_Store
 target
+robot/*.html
+robot/*.xml
+robot/*.png
