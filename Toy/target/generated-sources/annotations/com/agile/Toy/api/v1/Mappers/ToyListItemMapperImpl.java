@@ -1,23 +1,23 @@
-package com.agile.Toy.api.v1.Mappers;
+package com.agile.toy.api.v1.mappers;
 
-import com.agile.Toy.api.v1.Domain.CartEntities;
-import com.agile.Toy.api.v1.Domain.Toy;
-import com.agile.Toy.api.v1.Model.CartDTO;
-import com.agile.Toy.api.v1.Model.ToyDetailsDTO;
-import com.agile.Toy.api.v1.Model.ToyListItemDTO;
+import com.agile.toy.api.v1.domains.CartEntities;
+import com.agile.toy.api.v1.domains.Toy;
+import com.agile.toy.api.v1.models.CartEntitiesDTO;
+import com.agile.toy.api.v1.models.ToyDetailsDTO;
+import com.agile.toy.api.v1.models.ToyListItemDTO;
 import javax.annotation.Generated;
 import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2018-02-28T15:18:36+0700",
+    date = "2018-03-01T09:54:42+0700",
     comments = "version: 1.2.0.CR2, compiler: javac, environment: Java 1.8.0_161 (Oracle Corporation)"
 )
 @Component
 public class ToyListItemMapperImpl implements ToyListItemMapper {
 
     @Override
-    public ToyListItemDTO ToyToToyListItemDTO(Toy toy) {
+    public ToyListItemDTO convertToyDomainToToyListDto(Toy toy) {
         if ( toy == null ) {
             return null;
         }
@@ -36,7 +36,7 @@ public class ToyListItemMapperImpl implements ToyListItemMapper {
     }
 
     @Override
-    public ToyDetailsDTO ToyToToyDetailsDTO(Toy toy) {
+    public ToyDetailsDTO convertToyDomainToToyDetailDto(Toy toy) {
         if ( toy == null ) {
             return null;
         }
@@ -55,18 +55,34 @@ public class ToyListItemMapperImpl implements ToyListItemMapper {
     }
 
     @Override
-    public CartDTO CartToCartDTO(CartEntities cart) {
+    public CartEntitiesDTO convertCartDomainToCartDto(CartEntities cart) {
         if ( cart == null ) {
             return null;
         }
 
-        CartDTO cartDTO = new CartDTO();
+        CartEntitiesDTO cartEntitiesDTO = new CartEntitiesDTO();
 
-        cartDTO.setCartId( cart.getCartId() );
-        cartDTO.setToyId( cart.getToyId() );
-        cartDTO.setOrderQuantity( cart.getOrderQuantity() );
-        cartDTO.setId( cart.getId() );
+        cartEntitiesDTO.setCartId( cart.getCartId() );
+        cartEntitiesDTO.setToyId( cart.getToyId() );
+        cartEntitiesDTO.setOrderQuantity( cart.getOrderQuantity() );
+        cartEntitiesDTO.setId( cart.getId() );
 
-        return cartDTO;
+        return cartEntitiesDTO;
+    }
+
+    @Override
+    public CartEntities convertCartDtoToCartDomain(CartEntitiesDTO cartEntitiesDTO) {
+        if ( cartEntitiesDTO == null ) {
+            return null;
+        }
+
+        CartEntities cartEntities = new CartEntities();
+
+        cartEntities.setId( cartEntitiesDTO.getId() );
+        cartEntities.setCartId( cartEntitiesDTO.getCartId() );
+        cartEntities.setToyId( cartEntitiesDTO.getToyId() );
+        cartEntities.setOrderQuantity( cartEntitiesDTO.getOrderQuantity() );
+
+        return cartEntities;
     }
 }
