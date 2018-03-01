@@ -21,10 +21,10 @@ angular
         }
 
         function getProductDetailbyId(productId) {
-            //var url = urlDev + '/api/v1/toy/' + productId;
-            var urlToJsonFile = './content/json/toy-1.json';
+            var url = urlDev + '/api/v1/toy/' + productId;
+            // var urlToJsonFile = './content/json/toy-1.json';
 
-            var promise = $http.get(urlToJsonFile);
+            var promise = $http.get(url);
             return promise;
         }
 
