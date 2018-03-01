@@ -71,7 +71,7 @@ public class DefaultToyServiceIntegrationTest {
     @Test
     public void getToyListItemByFemaleAndNine(){
         String gender = "Female";
-        String age = "9";
+        String age = "9+";
 
         List<ToyListItemDTO> toyListItemDTOs= toyService.getToyFromGenderAndAge(gender,age);
 

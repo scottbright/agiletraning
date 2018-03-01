@@ -39,6 +39,11 @@ public class DefaultCheckOutServiceTest {
 
         when(toyListsRepository.findOne(any(Long.class))).thenReturn(toy);
 
+        Toy toy2 = new Toy();
+        toy2.setId(1L);
+        toy2.setAmountInStock(24);
+        when(toyListsRepository.findOne(any(Long.class))).thenReturn(toy2);
+
         ToyListItemDTO afterCuttingStock = checkOutService.cutStock(toyId);
 
         assertEquals(toy.getAmountInStock().intValue()-1,afterCuttingStock.getAmountInStock().intValue());
