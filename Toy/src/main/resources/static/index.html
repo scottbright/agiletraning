@@ -5,20 +5,19 @@
     <!-- Angular Material style sheet -->
     <link rel="stylesheet" href="./content/css/angular-material.min.css">
     <link rel="stylesheet" href="./content/css/hover.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
 </head>
 
 <body ng-app="myapp" ng-cloak>
     <md-toolbar class="md-hue-2">
         <div class="md-toolbar-tools">
-            
-            <h2 flex md-truncate><a ng-href="{{window.location}}"></a>Toy R not Us</a></h2>
-
-            <md-button class="md-icon-button" aria-label="Favorite">
-                <a ng-href="{{window.location}}/#!/cart">
-                    <i  class="material-icons">shopping_cart</i>
+            <a id="go-home" ng-href="{{window.location}}/#!">
+                <h2 flex md-truncate><b>Toy R not Us</b></h2>
+            </a>
+            <md-button class="md-icon-button align-right" aria-label="Favorite">
+                <a id="go-cart" ng-href="{{window.location}}/#!/cart">
+                    <i class="material-icons">shopping_cart</i>
                 </a>
             </md-button>
         </div>
@@ -40,7 +39,7 @@
 
     <!-- Angular Material Library -->
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script> -->
-    <script src="content/js/angular-material.min.js"></script> 
+    <script src="content/js/angular-material.min.js"></script>
 
     <!-- Angular Material Library -->
     <!--<script src="./content/js/angular-material.min.js"></script>-->

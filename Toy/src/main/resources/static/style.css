@@ -73,3 +73,8 @@ td, th {
     /* Support for IE. */
     font-feature-settings: 'liga';
   }
+  .align-right {
+    position: absolute;
+    right: 0px;
+    margin-right: 10px !important;
+  }
