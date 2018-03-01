@@ -28,8 +28,9 @@ public class DefaultToyServiceIntegrationTest {
     private Bootstrap bootstrap;
 
     private ToyService toyService;
+
     @Autowired
-    ToyListsRepository toyListsRepository;
+    private ToyListsRepository toyListsRepository;
 
     @Autowired
     CartEntitiesRepository cartEntitiesRepository;
