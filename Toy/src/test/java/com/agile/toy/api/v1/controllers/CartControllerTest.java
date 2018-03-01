@@ -1,7 +1,9 @@
 package com.agile.toy.api.v1.controllers;
 
 import com.agile.toy.api.v1.domains.CartEntities;
+import com.agile.toy.api.v1.domains.ToyInCart;
 import com.agile.toy.api.v1.models.CartEntitiesDTO;
+import com.agile.toy.api.v1.models.ToyInCartDTO;
 import com.agile.toy.api.v1.services.CartService;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -14,10 +16,14 @@ import org.springframework.http.MediaType;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static com.agile.toy.utilities.JsonCoverter.convertObjectToJsonString;
 import static org.hamcrest.Matchers.equalTo;
 import static org.mockito.Matchers.any;
 import static org.mockito.Mockito.when;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -50,5 +56,25 @@ public class CartControllerTest {
 
 
     }
+
+    @Test
+    public void getCartTest() throws Exception {
+        Long cardId = 1L;
+        ToyInCartDTO toyInCartDTO = new ToyInCartDTO();
+        toyInCartDTO.setToyName("luis");
+
+        List<ToyInCartDTO> toyInCartDTOList = new ArrayList<>();
+        toyInCartDTOList.add(toyInCartDTO);
+
+        when(cartService.getCartDetails(any(Long.class))).thenReturn(toyInCartDTOList);
+
+        mockMvc.perform(get("/api/v1/cart/"+cardId)
+                .contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$[0].toyName",equalTo(toyInCartDTO.getToyName())));
+
+
+    }
+
 
 }

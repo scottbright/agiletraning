@@ -1,10 +1,12 @@
 package com.agile.toy.api.v1.services;
 
 import com.agile.toy.api.v1.domains.CartEntities;
+import com.agile.toy.api.v1.domains.ToyInCart;
 import com.agile.toy.api.v1.mappers.ToyListItemMapper;
 import com.agile.toy.api.v1.models.CartEntitiesDTO;
 import com.agile.toy.api.v1.models.ToyInCartDTO;
 import com.agile.toy.api.v1.repositories.CartEntitiesRepository;
+import com.agile.toy.api.v1.repositories.CartEntriesViewRepository;
 import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
@@ -25,12 +27,14 @@ public class DefaultCartServiceTest {
     @Mock
     private CartEntitiesRepository cartEntitiesRepository;
 
+    @Mock
+    private CartEntriesViewRepository cartEntriesViewRepository;
 
     private CartService cartService;
 
     @Before
     public void setUp() {
-        cartService = new DefaultCartService(cartEntitiesRepository, ToyListItemMapper.INSTANCE);
+        cartService = new DefaultCartService(cartEntitiesRepository, cartEntriesViewRepository,ToyListItemMapper.INSTANCE);
     }
 
     @Test
@@ -57,17 +61,17 @@ public class DefaultCartServiceTest {
 
     }
 
-    @Test@Ignore
+    @Test
     public void getCartInfoTest(){
         Long cartId = 1L;
 
-        List<ToyInCartDTO> toyInCartDTOList = new ArrayList<>();
-        ToyInCartDTO toyInCartDTO1 = new ToyInCartDTO();
-        ToyInCartDTO toyInCartDTO2 = new ToyInCartDTO();
-        toyInCartDTOList.add(toyInCartDTO1);
-        toyInCartDTOList.add(toyInCartDTO2);
+        List<ToyInCart> toyInCartList = new ArrayList<>();
+        ToyInCart toyInCart1 = new ToyInCart();
+        ToyInCart toyInCart2 = new ToyInCart();
+        toyInCartList.add(toyInCart1);
+        toyInCartList.add(toyInCart2);
 
-       // when(toyInCartRepository.getCart(cartId)).thenReturn(toyInCartDTOList);
+        when(cartEntriesViewRepository.getCart(any(Long.class))).thenReturn(toyInCartList);
 
         List<ToyInCartDTO> resultToyList = cartService.getCartDetails(cartId);
 

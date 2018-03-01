@@ -1,9 +1,18 @@
-package com.agile.toy.api.v1.models;
+package com.agile.toy.api.v1.domains;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
-public class ToyInCartDTO {
+@Entity(name = "CartEntriesView")
+public class ToyInCart {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    private Long cartId;
 
     private Long toyId;
 
@@ -84,6 +93,14 @@ public class ToyInCartDTO {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public Long getCartId() {
+        return cartId;
+    }
+
+    public void setCartId(Long cartId) {
+        this.cartId = cartId;
     }
 
     public Long getToyId() {
