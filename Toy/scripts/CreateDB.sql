@@ -44,3 +44,8 @@ CREATE TABLE `CartEntries` (
 
 
 insert into Carts(ID,UserID,Status)  value (1,'chan','Draft');
+
+CREATE OR REPLACE VIEW `CartEntriesView` AS
+SELECT ce.ID, ce.CartID, ce.ToyID, t.ToyName, t.Brand, t.Age, t.Gender,t.Price, t.AmountInStock, ce.OrderQuantity
+FROM  ToyLists t, CartEntries ce
+WHERE t.ID = ce.ToyID

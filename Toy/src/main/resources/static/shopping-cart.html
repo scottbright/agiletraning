@@ -12,18 +12,18 @@
                 <tr ng-repeat="item in shoppingCartItem">
                     <td>
                         <md-list flex>
-                            <md-list-item>
+                            <md-list-item id="toy-name">
                                 <b>{{item.toyName}}</b>&nbsp;by {{item.brand}}</md-list-item>
-                            <md-list-item>For {{item.gender}} Age {{item.age}}</md-list-item>
-                            <md-list-item ng-if="item.quantity>0" class="in-stock">In Stock</md-list-item>
-                            <md-list-item ng-if="item.quantity===0" class="out-of-stock">Out of Stock</md-list-item>
+                            <md-list-item id="toy-age">For {{item.gender}} Age {{item.age}}</md-list-item>
+                            <md-list-item id="toy-in-stock" ng-if="item.quantity>0" class="in-stock">In Stock</md-list-item>
+                            <md-list-item id="toy-out-of-stock" ng-if="item.quantity===0" class="out-of-stock">Out of Stock</md-list-item>
                             <md-list-item>
-                                <md-button class="md-warn" ng-click="delete($index)">Delete</md-button>
+                                <md-button id="delete-button" class="md-warn" ng-click="delete($index)">Delete</md-button>
                             </md-list-item>
                     </td>
                     <td>
-                        <md-select ng-model="item.orderQuantity" ng-change="calculateSubTotal()">
-                            <md-option ng-repeat="quantity in item.quantityList" value="{{quantity}}">{{quantity}}</md-option>
+                        <md-select id="toy-select-quantity" ng-model="item.orderQuantity" ng-change="calculateSubTotal()">
+                            <md-option id="toy-select-{{$index+1}}" ng-repeat="quantity in item.quantityList" value="{{quantity}}">{{quantity}}</md-option>
                         </md-select>
                     </td>
                     <td>{{item.price}}</td>
@@ -47,10 +47,10 @@
         </div>
         <div layout="row" class="right">
                 <md-input-container>
-                    <md-button  class="md-raised" ng-click="continueShopping()">Continue Shopping</md-button>
+                    <md-button  id="continue-shopping-button" class="md-raised" ng-click="continueShopping()">Continue Shopping</md-button>
                 </md-input-container>
                 <md-input-container>
-                    <md-button class="md-raised  md-primary" ng-click="checkOut()">Process to checkout</md-button>
+                    <md-button id="check-out-button" class="md-raised  md-primary" ng-click="checkOut()">Process to checkout</md-button>
                 </md-input-container>
             </div>
     </div>

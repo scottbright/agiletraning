@@ -14,7 +14,7 @@ angular
                         angular.forEach($scope.shoppingCartItem, function (item, key) {
                             item.quantityList = [];
 
-                            for (var i = 1; i < item.quantity && i <= 25; i++) {
+                            for (var i = 1; i <= item.quantity && i <= 25; i++) {
                                 item.quantityList.push(i);
                             }
                         })
