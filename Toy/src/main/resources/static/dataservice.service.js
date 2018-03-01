@@ -41,9 +41,9 @@ angular
 
 
         function getShoppingCartItem() {
-            // var url = '';
-            var urlToJsonFile = './content/json/shopping-cart.json';
-            var promise = $http.get(urlToJsonFile);
+            var url = urlDev + '/api/v1/cart/1';
+            // var urlToJsonFile = './content/json/shopping-cart.json';
+            var promise = $http.get(url);
             return promise;
         }
 

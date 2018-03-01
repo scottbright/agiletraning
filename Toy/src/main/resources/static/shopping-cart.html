@@ -9,20 +9,20 @@
                     <th>Price (THB)</th>
 
                 </tr>
-                <tr ng-repeat="item in shoppingCartItem">
+                <tr ng-repeat="item in shoppingCartItem" ng-show="item.orderQuantity>0">
                     <td>
                         <md-list flex>
                             <md-list-item id="toy-name">
                                 <b>{{item.toyName}}</b>&nbsp;by {{item.brand}}</md-list-item>
                             <md-list-item id="toy-age">For {{item.gender}} Age {{item.age}}</md-list-item>
-                            <md-list-item id="toy-in-stock" ng-if="item.quantity>0" class="in-stock">In Stock</md-list-item>
-                            <md-list-item id="toy-out-of-stock" ng-if="item.quantity===0" class="out-of-stock">Out of Stock</md-list-item>
+                            <md-list-item id="toy-in-stock" ng-if="item.amountInStock>0" class="in-stock">In Stock</md-list-item>
+                            <md-list-item id="toy-out-of-stock" ng-if="item.amountInStock===0" class="out-of-stock">Out of Stock</md-list-item>
                             <md-list-item>
                                 <md-button id="delete-button" class="md-warn" ng-click="delete($index)">Delete</md-button>
                             </md-list-item>
                     </td>
                     <td>
-                        <md-select id="toy-select-quantity" ng-model="item.orderQuantity" ng-change="calculateSubTotal()">
+                        <md-select id="toy-select-quantity" ng-model="item.orderQuantity" ng-change="calculateSubTotal(shoppingCartItem)">
                             <md-option id="toy-select-{{$index+1}}" ng-repeat="quantity in item.quantityList" value="{{quantity}}">{{quantity}}</md-option>
                         </md-select>
                     </td>
@@ -41,7 +41,7 @@
                 </md-list>
             </md-input-container>
             <md-input-container flex>
-                    <md-list-item>Subtotal ({{shoppingCartItem.length}} item{{shoppingCartItem.length>1?'s':''}}) : {{subTotal}} THB </md-list-item>
+                    <md-list-item>Subtotal ({{shoppingCartItem.length}} item{{shoppingCartItem.length>1?'s':''}}) : {{subTotal | number}} THB </md-list-item>
                     <md-list-item>Shipping Fee: 50.00 THB</md-list-item>
             </md-input-container>
         </div>
