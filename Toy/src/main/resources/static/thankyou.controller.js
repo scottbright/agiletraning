@@ -3,21 +3,21 @@ angular
     .controller("ThankyouController", function ($scope, $routeParams, $location, dataservice) {
         // Using $routeParams
         $scope.dataservice = dataservice;
-
-        //mock user ID
-        var userId = 'chan'; 
-
-        $scope.getOrderDetail = function (userId) {
-            $scope.dataservice.getOrderDetail(userId)
+        $scope.order;
+        $scope.getOrderDetail = function () {
+            $scope.dataservice.getOrderDetail()
                 .then(
                     function (response) {
-                        $scope.order = response.data;
+                        // console.log(response)
+                        if(response.data.length > 0){
+                            $scope.order = response.data;
+                        }
                     },
                     function (err) { 
                         
                     }
                 );
         }
-        $scope.getOrderDetail(userId);
+        $scope.getOrderDetail();
 
     });

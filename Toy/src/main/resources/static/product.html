@@ -17,7 +17,7 @@
                     <md-list-item id="toy-quantity" ng-if="toyDetail.amountInStock>0">
                         Quantity:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <md-select id="toy-quantity-select" ng-model="selectedQuantity">
-                            <md-option id="toy-{{$index+1}}" ng-repeat="quantity in quantityList" value="{{quantity}}">{{quantity}}</md-option>
+                            <md-option id="toy-{{$index+1}}" ng-repeat="quantity in quantityList" ng-click="changeSelectedQuantity(quantity)" value="{{quantity}}">{{quantity}}</md-option>
                         </md-select>
                     </md-list-item>
                     <md-list-item id="toy-quantity-out-of-stock" ng-if="toyDetail.amountInStock==0">
@@ -27,7 +27,8 @@
                 </md-list>
                 <div layout="row">
                     <md-input-container class="padding-right-25" flex="75">
-                        <md-button md-no-ink class="md-raised md-primary toy-button" name="add-button" ng-click="addToCart()">Add to cart</md-button>
+                        <md-button ng-if="toyDetail.amountInStock>0" md-no-ink class="md-raised md-primary toy-button" name="add-button" ng-click="addToCart()">Add to cart</md-button>
+                        <md-button ng-if="toyDetail.amountInStock==0" md-no-ink class="md-raised md-primary toy-button disabled" name="add-button">Add to cart</md-button>
                     </md-input-container>
                     <md-input-container class="padding-right-25" flex="25">
                         <md-button class="md-raised toy-button" name="back-button"  ng-click="back()">Back</md-button>

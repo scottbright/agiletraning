@@ -2,10 +2,10 @@ angular
     .module("myapp")
     .controller("ProductSearchController", function ($scope,$location, dataservice) {
     $scope.ages = ['all', '0','1', '2', '3', '4', '5', '6', '7', '8', '9+'];
-    $scope.selectedAge = 'All';
+    $scope.selectedAge = 'all';
     
     $scope.genders = ['all', 'male', 'female'];
-    $scope.selectedGender = 'All';
+    $scope.selectedGender = 'all';
 
     $scope.dataService =  dataservice;
 
@@ -24,7 +24,9 @@ angular
         );
     }
     $scope.search();
-
+    $scope.console = function(){
+        console.log($scope.selectedGender);
+    }
     $scope.gotoProductDetail = function(productId){
         $location.path('/product/' + productId);
     }

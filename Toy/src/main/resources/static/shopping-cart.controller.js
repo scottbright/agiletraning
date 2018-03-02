@@ -36,7 +36,6 @@ angular
         $scope.checkOut = function () {
             // $location.path('/shipping');thankyou
             $location.path('/thankyou');
-            
         }
         $scope.delete = function(index){
             // $scope.shoppingCartItem.splice(index,1);
