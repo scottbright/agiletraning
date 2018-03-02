@@ -21,6 +21,7 @@ import static org.junit.Assert.assertEquals;
 @DataJpaTest
 @DirtiesContext(classMode = DirtiesContext.ClassMode.AFTER_EACH_TEST_METHOD)
 @ActiveProfiles("Test")
+@Ignore
 public class CheckOutServiceIntegrationTest {
 
 
@@ -46,6 +47,7 @@ public class CheckOutServiceIntegrationTest {
         cartService = new DefaultCartService(cartEntitiesRepository, cartEntriesViewRepository, ToyListItemMapper.INSTANCE);
         checkOutService = new DefaultCheckOutService(toyListsRepository,ToyListItemMapper.INSTANCE,cartEntitiesRepository);
     }
+
 
 
 }
