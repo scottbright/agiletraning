@@ -27,7 +27,8 @@
                 </md-list>
                 <div layout="row">
                     <md-input-container class="padding-right-25" flex="75">
-                        <md-button md-no-ink class="md-raised md-primary toy-button" name="add-button" ng-click="addToCart()">Add to cart</md-button>
+                        <md-button ng-if="toyDetail.amountInStock>0" md-no-ink class="md-raised md-primary toy-button" name="add-button" ng-click="addToCart()">Add to cart</md-button>
+                        <md-button ng-if="toyDetail.amountInStock==0" md-no-ink class="md-raised md-primary toy-button disabled" name="add-button">Add to cart</md-button>
                     </md-input-container>
                     <md-input-container class="padding-right-25" flex="25">
                         <md-button class="md-raised toy-button" name="back-button"  ng-click="back()">Back</md-button>
