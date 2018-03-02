@@ -31,13 +31,13 @@ Test Toy R not Us
 
 *** Keyword ***
 Choose Target and Option
-    [Arguments]    ${target}      ${option}
+    [Arguments]    ${box}      ${choice}
     Set Selenium Speed      2 seconds
     #wait until page contains element      xpath=${target}
-    click element    ${target}
+    click element    ${box}
     Set Selenium Speed      0.5 seconds
     #wait until page contains element      xpath=${option}    
-    click element    ${option}
+    click element    ${choice}
 
 STEP Filter
     [Arguments]    ${target}      ${option}
