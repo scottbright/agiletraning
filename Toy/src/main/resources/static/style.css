@@ -79,6 +79,6 @@ td, th {
     margin-right: 10px !important;
   }
   .disabled{
-    background-color: grey;
+    background-color: grey !important;
     cursor: not-allowed;
   }
