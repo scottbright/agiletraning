@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e6680839-ceb1-4f5d-afdc-9cc7b5d931da" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/agile/toy/api/v1/controllers/CartController.java" afterPath="$PROJECT_DIR$/src/main/java/com/agile/toy/api/v1/controllers/CartController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/agile/toy/api/v1/models/ToyDetailsDTO.java" afterPath="$PROJECT_DIR$/src/main/java/com/agile/toy/api/v1/models/ToyDetailsDTO.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/agile/toy/api/v1/controllers/CartControllerTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/agile/toy/api/v1/controllers/CartControllerTest.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/agile/toy/api/v1/services/CheckOutServiceIntegrationTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/agile/toy/api/v1/services/CheckOutServiceIntegrationTest.java" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/agile/toy/api/v1/controllers/CartControllerIntegrationTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/agile/toy/api/v1/controllers/CartControllerIntegrationTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,6 +17,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="CartControllerIntegrationTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/agile/toy/api/v1/controllers/CartControllerIntegrationTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="401">
+              <caret line="69" column="27" lean-forward="true" selection-start-line="69" selection-start-column="27" selection-end-line="69" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="CartController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/agile/toy/api/v1/controllers/CartController.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -33,20 +39,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CartEntities.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/agile/toy/api/v1/domains/CartEntities.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="40">
-              <caret line="8" column="27" lean-forward="false" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CartControllerTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CartControllerTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/agile/toy/api/v1/controllers/CartControllerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
+            <state relative-caret-position="406">
               <caret line="86" column="0" lean-forward="true" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
               <folding />
             </state>
@@ -216,11 +212,11 @@
         <option value="$PROJECT_DIR$/src/main/java/com/agile/toy/api/v1/services/CheckOutService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/agile/toy/api/v1/services/DefaultCheckOutService.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/agile/toy/api/v1/services/DefaultCheckOutServiceTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/agile/toy/api/v1/controllers/CartControllerIntegrationTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/agile/toy/api/v1/models/ToyDetailsDTO.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/agile/toy/api/v1/services/CheckOutServiceIntegrationTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/agile/toy/api/v1/controllers/CartController.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/agile/toy/api/v1/controllers/CartControllerTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/agile/toy/api/v1/controllers/CartControllerIntegrationTest.java" />
       </list>
     </option>
   </component>
@@ -508,7 +504,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.CartControllerTest.checkout">
+  <component name="RunManager" selected="JUnit.CartControllerIntegrationTest">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -713,9 +709,9 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.CartControllerTest.checkout" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.CartControllerIntegrationTest" />
         <item index="1" class="java.lang.String" itemvalue="JUnit.CartControllerTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.CartControllerIntegrationTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.CartControllerTest.checkout" />
         <item index="3" class="java.lang.String" itemvalue="JUnit.All in Toy" />
         <item index="4" class="java.lang.String" itemvalue="Application.ToyAppApplication" />
       </list>
@@ -747,19 +743,19 @@
     <history-entry file="CartControllerIntegrationTest - 2018.03.02 at 10h 54m 12s.xml">
       <configuration name="CartControllerIntegrationTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CartControllerIntegrationTest_checkout - 2018.03.01 at 16h 00m 56s.xml">
-      <configuration name="CartControllerIntegrationTest.checkout" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CartControllerTest - 2018.03.01 at 15h 58m 51s.xml">
-      <configuration name="CartControllerTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="CartControllerTest - 2018.03.01 at 16h 23m 05s.xml">
       <configuration name="CartControllerTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="CartControllerTest - 2018.03.02 at 10h 54m 29s.xml">
       <configuration name="CartControllerTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="CartControllerTest - 2018.03.02 at 10h 59m 20s.xml">
+      <configuration name="CartControllerTest" configurationId="JUnit" />
+    </history-entry>
     <history-entry file="CartControllerTest_checkout - 2018.03.01 at 16h 00m 30s.xml">
+      <configuration name="CartControllerTest.checkout" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CartControllerTest_checkout - 2018.03.02 at 10h 55m 06s.xml">
       <configuration name="CartControllerTest.checkout" configurationId="JUnit" />
     </history-entry>
     <history-entry file="CheckOutServiceIntegrationTest_deleteCartIntegrationTest - 2018.03.01 at 16h 08m 58s.xml">
@@ -789,13 +785,13 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32960597" sideWeight="0.4812398" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32785088" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32785088" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286991" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32960597" sideWeight="0.5187602" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36293858" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2630458" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2630458" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973376" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1092,14 +1088,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/agile/toy/api/v1/controllers/CartControllerIntegrationTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="64" column="9" lean-forward="false" selection-start-line="64" selection-start-column="9" selection-end-line="64" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/agile/toy/api/v1/mappers/CartMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -1210,8 +1198,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/agile/toy/api/v1/controllers/CartControllerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
+        <state relative-caret-position="406">
           <caret line="86" column="0" lean-forward="true" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/agile/toy/api/v1/controllers/CartControllerIntegrationTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="401">
+          <caret line="69" column="27" lean-forward="true" selection-start-line="69" selection-start-column="27" selection-end-line="69" selection-end-column="27" />
           <folding />
         </state>
       </provider>
