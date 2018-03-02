@@ -17,14 +17,14 @@ Test Toy R not Us
     click button     name=search-button
 
     #Detail Page
-    click element     xpath=/html/body/ng-view/div/div/div[2]/table/tbody/tr[2]/td[1]
+    click element     xpath=/html/body/ng-view/div/div[2]/table/tbody/tr[2]/td[1]
     Choose Target and Option    id=toy-quantity-select    id=toy-9
     click button     name=add-button
 
     #Shopping Cart Page
     #Choose Target and Option    xpath=//*[@id="select_value_label_22"]    xpath=//*[@id="select_option_83"] 
     click button    id=check-out-button
-    wait until element contains      xpath=/html/body/ng-view/div/h1      Thank you for you shopping
+    wait until element contains      xpath=/html/body/ng-view/div/table/tbody/tr[2]/td[2]      9
     [Teardown]     Close Browser
 
 
