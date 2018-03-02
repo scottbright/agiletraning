@@ -23,7 +23,7 @@
                     </td>
                     <td>
                         <md-select id="toy-select-quantity" ng-model="item.orderQuantity" ng-change="calculateSubTotal(shoppingCartItem)">
-                            <md-option id="toy-select-{{$index+1}}" ng-repeat="quantity in item.quantityList" value="{{quantity}}">{{quantity}}</md-option>
+                            <md-option id="toy-select{{$parent.$index}}-{{$index+1}}" ng-repeat="quantity in item.quantityList" value="{{quantity}}">{{quantity}}</md-option>
                         </md-select>
                     </td>
                     <td>{{item.price}}</td>
