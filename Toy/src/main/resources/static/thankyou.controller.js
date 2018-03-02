@@ -9,6 +9,7 @@ angular
                 .then(
                     function (response) {
                         // console.log(response)
+                        console.log(response);
                         if(response.data.length > 0){
                             $scope.order = response.data;
                         }
@@ -18,6 +19,7 @@ angular
                     }
                 );
         }
-        $scope.getOrderDetail();
+        console.log("initialize controller");
+      $scope.getOrderDetail();
 
     });

@@ -57,7 +57,7 @@ angular
         function getOrderDetail() {
             var url = urlDev + '/api/v1/checkout';
             // var urlToJsonFile = './content/json/orderdetail.json';
-            var promise = $http.get(url);
+            var promise = $http.delete(url,[]);
             return promise;            
         }
     });
