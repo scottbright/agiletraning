@@ -20,28 +20,7 @@ Test Toy R not Us
     click element     xpath=/html/body/ng-view/div/div/div[2]/table/tbody/tr[2]/td[1]
     Choose Target and Option    id=toy-quantity-select    id=toy-5
     click button     name=add-button
-
-    #Edit Shopping Cart Page 1
-    click element    xpath=//*[@id="go-home"]
-
-    #-------------------------------------------------------------------------------------------------
-
-    #Filter
-    wait until page contains element      xpath=//*[@id="select_27"]
-    Choose Target and Option    xpath=//*[@id="select_27"]     xpath=//*[@id="select_option_34"]
-    Choose Target and Option    xpath=//*[@id="select_29"]     xpath=//*[@id="select_option_43"]
-    click button     name=search-button
-
-    #Detail Page
-    click element     xpath=/html/body/ng-view/div/div/div[2]/table/tbody/tr[2]/td[1]
-    Choose Target and Option    id=toy-quantity-select    id=toy-6
-    click button     name=add-button
-
-    #Edit Shopping Cart Page 2
     Choose Target and Option    id=toy-select-quantity    xpath=//*[@id="toy-select0-2"]
-
-
-
 
     click button    id=check-out-button
     wait until element contains      xpath=/html/body/ng-view/div/h1      Thank you for you shopping
