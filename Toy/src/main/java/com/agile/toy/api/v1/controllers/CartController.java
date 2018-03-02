@@ -42,7 +42,7 @@ public class CartController {
     }
 
     @CrossOrigin(origins = "*")
-    @GetMapping("/checkout")
+    @DeleteMapping("/checkout")
     @ResponseStatus(HttpStatus.OK)
     public List<ToyInCartDTO> checkOut(){
         List<ToyInCartDTO> toyInCarts = cartService.getCartDetails(1L);

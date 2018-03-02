@@ -47,11 +47,5 @@ public class CheckOutServiceIntegrationTest {
         checkOutService = new DefaultCheckOutService(toyListsRepository,ToyListItemMapper.INSTANCE,cartEntitiesRepository);
     }
 
-    @Test@Ignore
-    public void deleteCartIntegrationTest(){
 
-        checkOutService.clearCart();
-
-        assertEquals(null,cartService.getCartDetails(1L));
-    }
 }

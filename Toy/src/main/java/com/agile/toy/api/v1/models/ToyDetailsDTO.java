@@ -11,7 +11,6 @@ public class ToyDetailsDTO {
     private String Gender;
     private Double Price;
     private Integer AmountInStock;
-    private String PictureURL;
 
 
     public Long getId() {
@@ -70,11 +69,4 @@ public class ToyDetailsDTO {
         AmountInStock = amountInStock;
     }
 
-    public String getPictureURL() {
-        return PictureURL;
-    }
-
-    public void setPictureURL(String pictureURL) {
-        PictureURL = pictureURL;
-    }
 }
